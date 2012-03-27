@@ -1,0 +1,238 @@
+/***********************************
+All templates
+***********************************/
+
+.container {
+	.row {
+
+	}
+}
+
+/***********************************
+Templates
+***********************************/
+
+.container.template1 {
+	background: url(backgrounds/content.png) no-repeat;	
+	
+	#profile_page {
+		margin-bottom: 30px;
+
+		#main {
+			float: left;
+			width: 500px;
+		}	
+
+		#sidebar {
+			margin-left: 550px;
+		}
+
+		.region {
+			position: relative;
+
+			.panel {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.container.template2 {
+	#main	{
+
+	}
+}
+	/***********************************
+	Gallery
+	***********************************/
+	
+	.gallery.grid .gallery_item {
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	
+	/***********************************
+	Events Table
+	***********************************/
+	
+	table {
+		td {
+			border: 1px solid;
+			padding: 5px;
+		}
+	}	
+	
+
+/***********************************
+Articles
+***********************************/
+#articles_archive {
+	background-color: #DDEBF1;
+  background: -webkit-linear-gradient(top, #F1F7F9, #DDEBF1);
+  background: -moz-linear-gradient(top, #F1F7F9, #DDEBF1);
+	padding: 20px;
+}
+
+.articles_archive_month {
+	margin-bottom: 10px;
+}
+
+.article {
+	margin-bottom: 50px;
+}
+
+.article_details {
+	margin-top: 20px;
+	font-style: italic;
+	background-color: #DDEBF1;
+  background: -webkit-linear-gradient(top, #F1F7F9, #DDEBF1);
+  background: -moz-linear-gradient(top, #F1F7F9, #DDEBF1);
+	padding: 10px;
+}
+
+#comments_form textarea {
+	width: 100%;
+	height: 150px;
+}
+
+/****************************************************
+Profile Widget
+*****************************************************/
+
+.page_row {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.widget {
+	margin-bottom: 20px;
+}
+
+/***********************************
+Calendar
+***********************************/
+
+#calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: -20px;
+}
+
+tr.month_names {
+	font-size: 20px;
+}
+
+#calendar td {
+	width: 120px;
+	border: 1px solid #9FC7E6;
+	vertical-align: top;
+	height: 110px;
+	padding: 5px;
+}
+
+#calendar td.calendar_day_with_events {
+	background: #FCD436 url(backgrounds/calendar_day_with_events.jpg) repeat-x;				
+	background: -webkit-gradient(linear, left top, left bottom, from(#F6E290), to(#FCD436));
+	background: -moz-linear-gradient(top,  #F6E290,  #FCD436);
+}
+
+#calendar td.calendar_day_without_events {
+	background: #EEF9FF url(backgrounds/calendar_day_without_events.jpg) repeat-x;				
+	background: -webkit-gradient(linear, left top, left bottom, from(#F9FDFF), to(#EEF9FF));
+	background: -moz-linear-gradient(top,  #F9FDFF,  #EEF9FF);
+}
+
+#calendar .calendar_day_marker {
+	color: #9FC7E6;
+}
+
+#calendar td.otherMonth {
+	background-color: #E1EFF3;
+}
+
+#calendar .calendar_event {
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.calendar_event .event_time {
+	color: #666;
+}
+
+.events_widget h2 {
+	margin-bottom: 10px;
+}
+
+.event_day {
+	margin-bottom: 10px;
+	min-height: 60px;
+}
+
+.event_widget_event {
+	font-size: 16px;
+	margin-bottom: 5px;
+	color: #666;	
+}
+
+* html .event_day {
+	height: 60px;
+}
+
+.date_icon {
+	width: 57px;
+	height: 56px;
+	text-align: center;
+	background: url(backgrounds/date_icon.png);
+	float: left;
+	margin-right: 20px;
+}
+
+.date_icon .date_icon_month {
+	padding: 3px 0;
+	color: #FFF;
+}
+
+.date_icon .date_icon_day {
+	padding: 4px 0;
+	font-size: 18px;
+}
+
+#calendar_other_month_link_next {
+	float: right;
+}
+
+.calendar_other_month_link {
+	font-size: 18px;
+}
+
+/****************************************************
+Flash
+*****************************************************/
+
+#flash {
+  margin-bottom: 20px;
+}
+
+ul#flash_list {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.flash_item {
+  padding: 10px;
+  color: #fff;
+}
+
+.flash_item.notice {
+  background-color: #FFCC00;
+  background: -webkit-linear-gradient(top, #FFF6D1, #FFCC00);
+  background: -moz-linear-gradient(top, #FFF6D1, #FFCC00);
+	color: #006699;
+}
+
+.flash_item.error {
+  background-color: #CC0000;
+  background: -webkit-linear-gradient(top, #FD8C8C, #CC0000);
+  background: -moz-linear-gradient(top, #FD8C8C, #CC0000);
+}

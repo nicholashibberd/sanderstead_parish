@@ -1,0 +1,124 @@
+/***********************************
+Common elements
+***********************************/
+
+a, a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+.container h1 {
+	margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+	color: #006699;
+}
+
+#spacer, .spacer {
+	clear: both;
+}
+
+/***********************************
+Layout
+***********************************/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body#sanderstead_parish {
+	margin: 0;
+	padding: 0;
+	background-color: #EDF4F7;
+	
+	#wrapper {
+		margin: auto;
+		width: 1160px;
+		background: url(backgrounds/wrapper.gif) repeat-y;
+		border: 10px solid #fff;
+		box-shadow: 1px 1px 5px #333;	
+	}
+
+	#background_image {
+		height: 200px;
+	}
+
+	#footer_wrapper {
+		margin: auto;
+		width: 960px;
+	}
+
+	#footer {
+		padding: 20px 100px 40px 100px;
+		margin-top: 20px;
+		text-align: center;
+	}
+		
+	.container {
+		padding: 40px 115px 50px;
+		min-height: 400px;
+		position: relative;
+	}
+	
+	
+	/***********************************
+	Header
+	***********************************/
+
+	#header {
+		height: 120px;
+		position: relative;
+		padding: 0 100px;	
+		background-color: #C6DDE7;
+	  background: -webkit-linear-gradient(top, #FFF, #C6DDE7);
+	  background: -moz-linear-gradient(top, #FFF, #C6DDE7);
+	}
+
+	#logo {
+		padding-top: 20px;
+		height: 100px;
+	}
+
+	#logo h1 {
+		height: 50px;
+	}
+
+	#top_nav {
+		height: 50px;
+		padding: 0 100px;
+		background: #003366;				
+		background: -webkit-gradient(linear, left top, left bottom, from(#56789A), to(#003366));
+		background: -moz-linear-gradient(top,  #56789A, #003366);
+	}
+
+	#top_nav a {
+		float: left;
+		display: block;
+		font-size: 16px;
+		color: #FFF;
+		padding: 17px 20px 15px;
+	}
+
+	#top_nav a.selected {
+		background: #C6DDE7;
+		color: #000;
+	}
+	
+	#parish_nav {
+		position: absolute;
+		right: 100px;
+		top: 40px;
+	}
+
+	#parish_nav a {
+		display: block;
+		float: left;
+		margin-right: 30px;
+		font-size: 16px;
+	}
+}

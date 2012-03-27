@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SandersteadParish</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="sanderstead_parish">
+	<div id='wrapper'>
+		<div id='header'>
+			<div id="logo">
+				<h1><%= logo %></h1>
+				<div id="sub_logo">
+					<%= sub_logo %>
+				</div>
+			</div>
+			<div id="parish_nav">
+				<%= render 'layouts/parish_nav' %>
+			</div>
+		</div>
+		<div id='top_nav'>
+			<%= render 'layouts/application/top_nav' %>
+		</div>
+
+
+		<%= yield :background_image %>
+		<div class="container <%= request[:controller] %>_<%= request[:action] %>_content <%= @page.template %>">
+			<%= render 'layouts/application/flash', :flash => flash %>
+
+			<%= yield %>
+		</div>
+
+
+	</div>
+	<div id="footer">
+		<div id="footer_wrapper">
+			<%#= render 'layouts/footer' %>
+		</div>
+	</div>
+</body>
+</html>
