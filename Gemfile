@@ -25,12 +25,12 @@ gem 'capistrano'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :development do 
-	gem "my_engine", :path => "../cms"
-end 
+#group :development do 
+	#gem "cms", :path => "../cms"
+#end 
 
 group :production do 
-	gem "my_engine", :git => "git://github.com/nicholashibberd/cms.git"
+	gem "cms", :git => "git://github.com/nicholashibberd/cms.git"
 end
 
 group :test do
