@@ -7,8 +7,8 @@ set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
                     # This may be the same as your `Web` server
 
-role :web, "164.177.147.111"                          # Your HTTP server, Apache/etc
-role :app, "164.177.147.111"
+role :web, "164.177.150.83"                          # Your HTTP server, Apache/etc
+role :app, "164.177.150.83"
 
 ssh_options[:forward_agent] = true
 
