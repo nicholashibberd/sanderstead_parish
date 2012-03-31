@@ -7,8 +7,8 @@ set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
                     # This may be the same as your `Web` server
 
-role :web, "164.177.150.83"                          # Your HTTP server, Apache/etc
-role :app, "164.177.150.83"
+role :web, "31.222.136.90"                          # Your HTTP server, Apache/etc
+role :app, "31.222.136.90"
 
 ssh_options[:forward_agent] = true
 
@@ -18,7 +18,7 @@ set :deploy_via, :remote_cache
 
 set :user, "www-data"
 set :branch, "master"
-set :use_sudo, true
+set :use_sudo, false
 
 set :deploy_to, "/var/www/#{application}"
 
