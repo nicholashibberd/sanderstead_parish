@@ -1,5 +1,6 @@
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 require 'bundler/capistrano'
+require 'rvm/capistrano'
 
 set :application, "sanderstead_parish"
 set :repository,  "git@github.com:nicholashibberd/sanderstead_parish.git"
@@ -11,6 +12,10 @@ role :web, "31.222.136.90"                          # Your HTTP server, Apache/e
 role :app, "31.222.136.90"
 
 ssh_options[:forward_agent] = true
+set :rvm_ruby_string, 'ruby-1.9.2-p318'
+set :keep_releases, 5
+
+set :rvm_type, :system
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
