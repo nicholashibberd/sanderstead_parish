@@ -4,7 +4,7 @@ gem 'rails', '3.1.0'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
-
+#gem "cms", :path => "../cms"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,13 +25,8 @@ gem 'capistrano'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-#group :development do 
 	#gem "cms", :path => "../cms"
-#end 
-
-group :production do 
 	gem "cms", :git => "git://github.com/nicholashibberd/cms.git"
-end
 
 group :test do
   # Pretty printed test output
