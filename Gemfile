@@ -4,7 +4,8 @@ gem 'rails', '3.1.0'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
-gem "cms", :git => "git://github.com/nicholashibberd/cms.git"
+gem "cms", :git => "git://github.com/nicholashibberd/cms.git", :ref => '32823924db'
+#gem "cms", :path => "../cms"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,5 +28,5 @@ gem 'capistrano'
 
 group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
+  #gem 'turn', :require => false
 end
