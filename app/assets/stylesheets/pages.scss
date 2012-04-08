@@ -38,8 +38,22 @@ Templates
 }
 
 .container.template2 {
+	position: relative;
+	
 	#main	{
-
+		
+	}
+	
+	#sidebar {
+		background-color: #DDEBF1;
+	  background: -webkit-linear-gradient(top, #F1F7F9, #DDEBF1);
+	  background: -moz-linear-gradient(top, #F1F7F9, #DDEBF1);
+		box-shadow: 0px 0px 5px #333;
+		min-height: 500px;
+		width: 360px;
+		position: absolute;
+		right: 100px;
+		top: -150px;
 	}
 }
 	/***********************************
