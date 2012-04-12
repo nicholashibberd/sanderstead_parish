@@ -12,82 +12,277 @@ All templates
 Templates
 ***********************************/
 
-.container.template1 {
-	background: url(backgrounds/content.png) no-repeat;	
+#homepage {
+	#background_image {
+		position: absolute;
+	}
 	
-	#profile_page {
-		margin-bottom: 30px;
+	.container {
+		padding: 240px 110px 50px;				
+		background: url(backgrounds/content_tall.png) no-repeat;	
+		min-height: 400px;
+		position: relative;		
+	}
+}
 
-		#main {
-			float: left;
-			width: 500px;
+#template1.background {
+	background: #fff;
+	
+	#background_image {
+		position: absolute;
+	}
+	
+	.container {
+		background: url(backgrounds/template1_content.png) no-repeat;		
+		padding: 240px 110px 50px;		
+		position: relative;
+	}
+}
+
+#template1.no_background {
+	background: #fff url(backgrounds/no_background_content.png) repeat-x;			
+	
+	.container {
+		position: relative;		
+		padding-top: 30px;
+	}
+}
+
+#template2.background {
+	background: #fff;
+	
+	#background_image {
+		position: absolute;
+	}
+	
+	.container {
+		background: url(backgrounds/sidebar_content.png) no-repeat;
+		min-height: 400px;
+		position: relative;
+		padding: 45px 110px 50px;			
+		
+		#on_page_header {
+			position: absolute;
+			top: 300px;
 		}	
-
-		#sidebar {
-			margin-left: 550px;
-		}
-
-		.region {
-			position: relative;
-
-			.panel {
-				margin-bottom: 15px;
+		
+		#row0 {
+			#row0_column0 {
+				padding-top: 310px;
+			}
+			
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 500px;
 			}
 		}
 	}
 }
 
-.container.template2 {
-	position: relative;
+#template2.no_background {
+	background: #fff;
 	
-	#main	{
+	.container {
+		background: #fff url(backgrounds/no_background_content.png) repeat-x;			
+		min-height: 400px;
+		position: relative;
+		padding: 45px 110px 50px;				
 		
-	}
-	
-	#sidebar {
-		background-color: #DDEBF1;
-	  background: -webkit-linear-gradient(top, #F1F7F9, #DDEBF1);
-	  background: -moz-linear-gradient(top, #F1F7F9, #DDEBF1);
-		box-shadow: 0px 0px 5px #333;
-		min-height: 500px;
-		width: 360px;
-		position: absolute;
-		right: 100px;
-		top: -150px;
+		#row0 {
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 500px;
+			}
+		}
 	}
 }
-	/***********************************
-	Gallery
-	***********************************/
+
+#template3 {
+	background: #fff;
 	
-	.gallery.grid .gallery_item {
-		float: left;
-		margin-right: 20px;
-		margin-bottom: 20px;
+	.container {
+		background: url(backgrounds/no_background_content.png) repeat-x;		
+		padding: 40px 110px 50px;
+		position: relative;		
+		
+		#row0 {
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 400px;
+			}
+		}		
+	}		
+}
+
+#template5.background {
+	background: url(backgrounds/template5_content_background.png) repeat-y;
+	
+	#background_image {
+		position: absolute;
 	}
 	
-	/***********************************
-	Events Table
-	***********************************/
+	.container {
+		background: url(backgrounds/template5_content.png) no-repeat;		
+		padding: 240px 110px 50px;		
+		position: relative;
+		
+		#row0 {
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 400px;
+			}
+		}		
+	}		
+}
+
+#template5.no_background {
+	background: #fff;
 	
-	table {
-		td {
-			border: 1px solid;
-			padding: 5px;
+	.container {
+		background: url(backgrounds/no_background_content.png) repeat-x;		
+		padding: 40px 110px 50px;
+		position: relative;		
+		
+		#row0 {
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 400px;
+			}
+		}		
+	}		
+}
+
+#template4.no_background {
+	background: #fff;
+	
+	.container {
+		background: url(backgrounds/no_background_content.png) repeat-x;		
+		padding: 40px 110px 50px;
+		position: relative;		
+		
+		#row0 {
+			#row0_column0 {
+				background: #D8E7EF;		
+			}
+			
+		}		
+	}		
+}
+
+#template4.background {
+	background: url(backgrounds/template4_content_background.png) repeat-y;
+	
+	#background_image {
+		position: absolute;
+	}
+	
+	.container {
+		background: url(backgrounds/template4_content.png) no-repeat;		
+		padding: 240px 110px 50px;		
+		position: relative;
+		
+			#on_page_header {
+				padding-left: 260px;
+			}	
+			
+			.column0 {
+				background: #D8E7EF;		
+			}
+			
+			.column1 {
+				.widget {
+					padding-left: 20px;
+				}
+			}
+	}		
+}
+
+#article {
+	background: #fff;
+	
+	.container {
+		background: url(backgrounds/no_background_content.png) repeat-x;		
+		padding: 40px 110px 50px;
+		position: relative;		
+		
+		#articles_archive {
+			
+			h2 {
+				margin-bottom: 10px;
+			}
+			
+			.articles_archive_item {
+				margin-bottom: 5px;
+				font-size: 14px;
+			}
+			
 		}
-	}	
+		
+		#row0 {
+			#column1 {
+				background: #D8E7EF;
+				width: 255px;
+				padding: 20px;
+				min-height: 300px;
+			}
+		}
+		
+	}
+		
+}
+
+
+/***********************************
+Forms
+***********************************/
+
+.span5 {
+	input[type=text] {
+		width: 320px;
+		height: 25px;
+	}
+	textarea {
+		width: 320px;
+		height: 170px;
+	}
+}
+
+
+/***********************************
+Gallery
+***********************************/
+
+.gallery.grid .gallery_item {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+/***********************************
+Events Table
+***********************************/
+
+table {
+	td {
+		border: 1px solid;
+		padding: 5px;
+	}
+}	
 	
 
 /***********************************
 Articles
 ***********************************/
-#articles_archive {
-	background-color: #DDEBF1;
-  background: -webkit-linear-gradient(top, #F1F7F9, #DDEBF1);
-  background: -moz-linear-gradient(top, #F1F7F9, #DDEBF1);
-	padding: 20px;
-}
-
 .articles_archive_month {
 	margin-bottom: 10px;
 }

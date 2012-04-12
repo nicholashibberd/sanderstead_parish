@@ -22,14 +22,8 @@
 		<div id='top_nav'>
 			<%= render 'layouts/application/top_nav' %>
 		</div>
-
-
-		<%= yield :background_image %>
-		<div class="container <%= request[:controller] %>_<%= request[:action] %>_content <%= @page.template %>">
-			<%= render 'layouts/application/flash', :flash => flash %>
-
-			<%= yield %>
-		</div>
+		
+		<%= yield %>
 
 
 	</div>
