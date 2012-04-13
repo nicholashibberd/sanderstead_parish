@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/nicholashibberd/cms.git
-  revision: de4fcc4e0e2a05a7eb0456a999323c3c1943de9c
-  ref: de4fcc4e0e
+  revision: c1398f82c150c6925135252e77b97ab17ce6ebc6
+  ref: c1398f82c1
   specs:
     cms (0.0.1)
       bson_ext
@@ -116,7 +116,7 @@ GEM
     net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    paperclip (3.0.1)
+    paperclip (3.0.2)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)

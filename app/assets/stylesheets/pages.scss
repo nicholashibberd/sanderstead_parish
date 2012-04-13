@@ -4,6 +4,9 @@ All templates
 
 .container {
 	.row {
+		.row_header {
+			h1 {margin-left: 20px; padding-bottom: 10px; border-bottom: 1px dotted #ccc; margin-bottom: 20px}
+		}
 
 	}
 }
@@ -24,6 +27,10 @@ Templates
 		position: relative;		
 	}
 }
+
+/***********************************
+Template 1
+***********************************/
 
 #template1.background {
 	background: #fff;
@@ -48,6 +55,11 @@ Templates
 	}
 }
 
+/***********************************
+Template 2
+***********************************/
+
+
 #template2.background {
 	background: #fff;
 	
@@ -61,14 +73,14 @@ Templates
 		position: relative;
 		padding: 45px 110px 50px;			
 		
-		#on_page_header {
+		#row1_header {
 			position: absolute;
 			top: 300px;
 		}	
 		
 		#row0 {
 			#row0_column0 {
-				padding-top: 310px;
+				padding-top: 320px;
 			}
 			
 			#row0_column1 {
@@ -101,6 +113,11 @@ Templates
 	}
 }
 
+/***********************************
+Template 3
+***********************************/
+
+
 #template3 {
 	background: #fff;
 	
@@ -120,47 +137,10 @@ Templates
 	}		
 }
 
-#template5.background {
-	background: url(backgrounds/template5_content_background.png) repeat-y;
-	
-	#background_image {
-		position: absolute;
-	}
-	
-	.container {
-		background: url(backgrounds/template5_content.png) no-repeat;		
-		padding: 240px 110px 50px;		
-		position: relative;
-		
-		#row0 {
-			#row0_column1 {
-				background: #D8E7EF;
-				width: 330px;
-				padding: 20px;
-				min-height: 400px;
-			}
-		}		
-	}		
-}
+/***********************************
+Template 4
+***********************************/
 
-#template5.no_background {
-	background: #fff;
-	
-	.container {
-		background: url(backgrounds/no_background_content.png) repeat-x;		
-		padding: 40px 110px 50px;
-		position: relative;		
-		
-		#row0 {
-			#row0_column1 {
-				background: #D8E7EF;
-				width: 330px;
-				padding: 20px;
-				min-height: 400px;
-			}
-		}		
-	}		
-}
 
 #template4.no_background {
 	background: #fff;
@@ -191,7 +171,7 @@ Templates
 		padding: 240px 110px 50px;		
 		position: relative;
 		
-			#on_page_header {
+			#row1_header {
 				padding-left: 260px;
 			}	
 			
@@ -206,6 +186,63 @@ Templates
 			}
 	}		
 }
+
+/***********************************
+Template 5
+***********************************/
+
+#template5.background {
+	background: url(backgrounds/template5_content_background.png) repeat-y;
+	
+	#background_image {
+		position: absolute;
+	}
+	
+	.container {
+		background: url(backgrounds/template5_content.png) no-repeat;		
+		padding: 220px 110px 50px;		
+		position: relative;
+		
+		#row0 {
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 400px;
+			}
+		}		
+		
+		#row0_column0 {
+			margin-top: 80px;
+		}
+		
+		#row1_header {
+			position: absolute;
+			top: 240px;
+			width: 500px;
+		}
+	}		
+}
+
+#template5.no_background {
+	background: #fff;
+	
+	.container {
+		background: url(backgrounds/no_background_content.png) repeat-x;		
+		padding: 40px 110px 50px;
+		position: relative;		
+		
+		#row0 {
+			#row0_column1 {
+				background: #D8E7EF;
+				width: 330px;
+				padding: 20px;
+				min-height: 400px;
+			}
+		}		
+	}		
+}
+
 
 #article {
 	background: #fff;
@@ -374,37 +411,46 @@ tr.month_names {
 }
 
 .event_day {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
 	min-height: 60px;
-}
+	border-bottom: 1px solid #fff;
+	
+	.date_icon {
+		width: 57px;
+		height: 56px;
+		text-align: center;
+		background: url(backgrounds/date_icon.png);
+		float: left;
+		
+		.date_icon_month {
+			padding: 3px 0;
+			color: #FFF;
+		}
 
-.event_widget_event {
-	font-size: 16px;
-	margin-bottom: 5px;
-	color: #666;	
+		.date_icon_day {
+			padding: 4px 0;
+			font-size: 18px;
+		}
+	} /* date icon */
+	
+	.event_widget_event {
+		margin-bottom: 10px;
+		margin-left: 70px;
+		color: #666;
+		font-size: 14px;
+		
+		.event_name {
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;				
+		}
+	}
+	
 }
 
 * html .event_day {
 	height: 60px;
-}
-
-.date_icon {
-	width: 57px;
-	height: 56px;
-	text-align: center;
-	background: url(backgrounds/date_icon.png);
-	float: left;
-	margin-right: 20px;
-}
-
-.date_icon .date_icon_month {
-	padding: 3px 0;
-	color: #FFF;
-}
-
-.date_icon .date_icon_day {
-	padding: 4px 0;
-	font-size: 18px;
 }
 
 #calendar_other_month_link_next {
@@ -413,35 +459,4 @@ tr.month_names {
 
 .calendar_other_month_link {
 	font-size: 18px;
-}
-
-/****************************************************
-Flash
-*****************************************************/
-
-#flash {
-  margin-bottom: 20px;
-}
-
-ul#flash_list {
-  padding-left: 0px;
-  list-style-type: none;
-}
-
-.flash_item {
-  padding: 10px;
-  color: #fff;
-}
-
-.flash_item.notice {
-  background-color: #FFCC00;
-  background: -webkit-linear-gradient(top, #FFF6D1, #FFCC00);
-  background: -moz-linear-gradient(top, #FFF6D1, #FFCC00);
-	color: #006699;
-}
-
-.flash_item.error {
-  background-color: #CC0000;
-  background: -webkit-linear-gradient(top, #FD8C8C, #CC0000);
-  background: -moz-linear-gradient(top, #FD8C8C, #CC0000);
 }
