@@ -5,5 +5,4 @@
 // the compiled file.
 //
 //= require_self
-//= require_tree . 
 //= require 'cms'
