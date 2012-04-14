@@ -1,11 +1,7 @@
 GIT
-  remote: git://github.com/ryanb/nested_form.git
-  revision: 486e0f0e93f3ca455d5d0fc7869053257b6afce2
-  specs:
-    nested_form (0.2.0)
-
-PATH
-  remote: ../cms
+  remote: git://github.com/nicholashibberd/cms.git
+  revision: 37842d1d3139a488eb96c845a02f6815deff8396
+  ref: 37842d1d31
   specs:
     cms (0.0.1)
       bson_ext
@@ -19,6 +15,12 @@ PATH
       tinymce-rails
       truncate_html
       twitter-bootstrap-rails
+
+GIT
+  remote: git://github.com/ryanb/nested_form.git
+  revision: 486e0f0e93f3ca455d5d0fc7869053257b6afce2
+  specs:
+    nested_form (0.2.0)
 
 GEM
   remote: http://rubygems.org/
