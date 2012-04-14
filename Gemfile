@@ -4,7 +4,7 @@ gem 'rails', '3.1.0'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
-gem "cms", :git => "git://github.com/nicholashibberd/cms.git", :ref => '743c11cfa6'
+gem "cms", :git => "git://github.com/nicholashibberd/cms.git", :ref => '37842d1d31'
 #gem "cms", :path => "../cms"
 
 # Gems used only for assets and not required

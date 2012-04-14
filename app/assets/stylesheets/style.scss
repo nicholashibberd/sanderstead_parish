@@ -1,3 +1,5 @@
+@import "cms/mixins";
+
 /***********************************
 Common elements
 ***********************************/
@@ -71,9 +73,9 @@ body#sanderstead_parish {
 		height: 120px;
 		position: relative;
 		padding: 0 100px;	
-		background-color: #C6DDE7;
-	  background: -webkit-linear-gradient(top, #FFF, #C6DDE7);
-	  background: -moz-linear-gradient(top, #FFF, #C6DDE7);
+		background: red;
+		background: url(backgrounds/gradients/white_pale_blue.png);
+		@include gradiented(#FFF, #C6DDE7);
 	}
 
 	#logo {
@@ -96,9 +98,8 @@ body#sanderstead_parish {
 	#top_nav {
 		height: 50px;
 		padding: 0 100px;
-		background: #496886;				
-		background: -webkit-gradient(linear, left top, left bottom, from(#496886), to(#212f3d));
-		background: -moz-linear-gradient(top,  #496886, #212f3d);
+		background: url(backgrounds/gradients/blue_dark_blue.png);		
+  	@include gradiented(#496886, #212f3d);
 	}
 
 	#top_nav a {
@@ -111,9 +112,8 @@ body#sanderstead_parish {
 	}
 
 	#top_nav a.selected {
-		background-color: #EDF1F6;
-	  background: -webkit-linear-gradient(top, #EDF1F6, #B3C1D7);
-	  background: -moz-linear-gradient(top, #EDF1F6, #B3C1D7);
+		background: url(backgrounds/gradients/pale_blue_pale_blue.png);		
+  	@include gradiented(#EDF1F6, #B3C1D7);
 		color: #000;
 		text-shadow: 1px 1px 1px #fff;				
 	}

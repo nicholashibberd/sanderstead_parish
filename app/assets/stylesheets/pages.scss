@@ -1,3 +1,5 @@
+@import "cms/mixins";
+
 /***********************************
 All templates
 ***********************************/
@@ -331,9 +333,7 @@ Articles
 .article_details {
 	margin-top: 20px;
 	font-style: italic;
-	background-color: #DDEBF1;
-  background: -webkit-linear-gradient(top, #F1F7F9, #DDEBF1);
-  background: -moz-linear-gradient(top, #F1F7F9, #DDEBF1);
+  @include gradiented(#F1F7F9, #DDEBF1);		
 	padding: 10px;
 }
 
@@ -383,14 +383,12 @@ tr.month_names {
 
 #calendar td.calendar_day_with_events {
 	background: #FCD436 url(backgrounds/calendar_day_with_events.jpg) repeat-x;				
-	background: -webkit-gradient(linear, left top, left bottom, from(#F6E290), to(#FCD436));
-	background: -moz-linear-gradient(top,  #F6E290,  #FCD436);
+  @include gradiented(#F6E290, #FCD436);	
 }
 
 #calendar td.calendar_day_without_events {
 	background: #EEF9FF url(backgrounds/calendar_day_without_events.jpg) repeat-x;				
-	background: -webkit-gradient(linear, left top, left bottom, from(#F9FDFF), to(#EEF9FF));
-	background: -moz-linear-gradient(top,  #F9FDFF,  #EEF9FF);
+  @include gradiented(#F9FDFF, #EEF9FF);	
 }
 
 #calendar .calendar_day_marker {
@@ -414,30 +412,32 @@ tr.month_names {
 	margin-bottom: 10px;
 }
 
+.date_icon {
+	width: 57px;
+	height: 56px;
+	text-align: center;
+	background: url(backgrounds/date_icon.png);
+	float: left;
+	margin-right: 15px;
+	
+	.date_icon_month {
+		padding: 3px 0;
+		color: #FFF;
+	}
+
+	.date_icon_day {
+		padding: 4px 0;
+		font-size: 18px;
+	}
+} /* date icon */
+
+
 .event_day {
 	margin-bottom: 20px;
 	padding-bottom: 10px;
 	min-height: 60px;
 	border-bottom: 1px solid #fff;
-	
-	.date_icon {
-		width: 57px;
-		height: 56px;
-		text-align: center;
-		background: url(backgrounds/date_icon.png);
-		float: left;
 		
-		.date_icon_month {
-			padding: 3px 0;
-			color: #FFF;
-		}
-
-		.date_icon_day {
-			padding: 4px 0;
-			font-size: 18px;
-		}
-	} /* date icon */
-	
 	.event_widget_event {
 		margin-bottom: 10px;
 		margin-left: 70px;
