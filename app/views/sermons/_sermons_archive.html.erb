@@ -1,0 +1,8 @@
+<div id="articles_archive">
+	<h2>Sermons Archive</h2>
+	<% Sermon.months_with_articles(group).each do |month| %>
+		<div class="articles_archive_item ">
+			<%= link_to month.strftime('%B %Y'), main_app.sermons_path(group, :month => month.strftime('%m-%Y')) %>
+		</div>
+	<% end %>
+</div>

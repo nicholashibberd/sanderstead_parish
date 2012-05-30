@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/nicholashibberd/cms.git
-  revision: a527f2d852d8aa47f7ca0ea7b23016e05cc88d9b
-  ref: a527f2d852
+  revision: 62bfb8b701ff2dfeb62d28850de54e414e2aa6c3
+  ref: 62bfb8b701
   specs:
     cms (0.0.1)
       bson_ext
@@ -9,6 +9,7 @@ GIT
       jquery-rails
       later_dude
       mongoid-paperclip
+      nested_form
       rack-cache
       rails (~> 3.1)
       redcarpet
@@ -74,7 +75,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
-    commonjs (0.2.5)
+    commonjs (0.2.6)
     dragonfly (0.9.10)
       rack
     erubis (2.7.0)
@@ -88,12 +89,11 @@ GEM
       thor (~> 0.14)
     json (1.6.6)
     later_dude (0.3.3)
-    less (2.1.0)
-      commonjs (~> 0.2.0)
-      therubyracer (~> 0.10.0)
-    less-rails (2.2.0)
+    less (2.2.1)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.3)
       actionpack (>= 3.1)
-      less (~> 2.1.0)
+      less (~> 2.2.0)
     libv8 (3.3.10.4)
     mail (2.3.3)
       i18n (>= 0.4.0)
@@ -116,7 +116,7 @@ GEM
     net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    paperclip (3.0.2)
+    paperclip (3.0.4)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -170,11 +170,12 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    truncate_html (0.5.4)
-    twitter-bootstrap-rails (2.0.6)
+    truncate_html (0.5.5)
+    twitter-bootstrap-rails (2.0.8)
       actionpack (>= 3.1)
-      less-rails (~> 2.2.0)
+      less-rails (~> 2.2.2)
       railties (>= 3.1)
+      therubyracer (~> 0.10.1)
     tzinfo (0.3.32)
     uglifier (1.2.4)
       execjs (>= 0.3.0)

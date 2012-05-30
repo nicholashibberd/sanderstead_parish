@@ -1,0 +1,23 @@
+<div class="top_right_controls">
+	<%= link_to "New Sermon", main_app.new_cms_sermon_path(@group), :class => 'btn btn-info' %>
+</div>
+
+<div class="page_header">
+	<h1>Sermons</h1>
+</div>
+
+<section class="page_content">
+	<% @sermons.each do |sermon| %>
+		<div class="index_item page_index_item">
+			<div class="controls">
+				<%= link_to 'Delete', main_app.cms_sermon_path(@group, sermon), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-danger' %>				
+				<%= link_to 'Edit', main_app.edit_cms_sermon_path(@group, sermon), :class => 'btn btn-warning' %>							
+				<%= link_to 'View', main_app.sermon_path(@group, sermon), :class => 'btn' %>
+			</div>
+			<%= link_to sermon.title, main_app.edit_cms_sermon_path(@group, sermon) %>			
+			<div>
+				<%= l sermon.date, :format => :long %>
+			</div>
+		</div>
+	<% end %>
+</section>

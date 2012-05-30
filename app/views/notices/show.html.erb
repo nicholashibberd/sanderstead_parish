@@ -1,0 +1,32 @@
+<div id="article" class="no_background_image">
+	<div class="container <%= request[:controller] %>_<%= request[:action] %>_content">
+		<%= render 'layouts/application/flash', :flash => flash %>
+
+			<div class="row" id="row0">
+				<div class="span8 column" id="column0">
+					<div class="article">
+						<div class="article_title">
+							<%= date_icon(@notice.date).html_safe %>
+							<h2><%= link_to @notice.title, @notice %></h2>
+						</div>
+						<div class="article_content">
+							<%= @notice.content.html_safe %>
+						</div>
+						<div class="article_details">
+							<div class="article_author">
+								By <%= @notice.person.name %> on <%= l @notice.date, :format => :long %>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="span4 column" id="column1">
+					<%#= render 'articles/articles_archive', :category => @article.category, :group => @group %>
+					<%= render 'notices/notices_archive', :group => @group %>
+				</div>
+
+			</div>
+		
+
+	</div>
+</div>
