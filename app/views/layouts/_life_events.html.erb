@@ -1,0 +1,56 @@
+<div id="life_events">
+	<div id="main_content">
+		<h1>Life Events in Sanderstead Parish</h1>
+		<section class="life_events_section">
+			<h2>Thanksgivings and baptisms</h2>
+			
+			<%= region('thanksgivings_and_baptisms') do |region| %>
+			  <div class="region_left">
+ 					<%= region.images %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>
+						
+		</section>
+		
+		<section class="life_events_section">
+			<h2>Weddings</h2>			
+			
+			<%= region('weddings') do |region| %>
+			  <div class="region_left">
+ 					<%= region.images %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>
+			
+		</section>
+		<section class="life_events_section">
+			<h2>Funerals</h2>
+			<%= region('funerals') do |region| %>
+			  <div class="region_left">
+ 					<%= region.images %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>
+
+		</section>
+		<section class="life_events_section">
+			<h2>Confirmation</h2>			
+			<%= region('confirmation') do |region| %>
+			  <div class="region_left">
+ 					<%= region.images %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>
+
+		</section>
+	</div>
+</div>

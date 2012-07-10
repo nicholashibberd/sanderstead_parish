@@ -1,3 +1,2 @@
 class Sermon < Article
-  
 end

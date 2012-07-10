@@ -16,11 +16,11 @@
 				</div>
 			</div>
 			<div id="parish_nav">
-				<%= render 'layouts/parish_nav' %>
+				<%#= render 'layouts/parish_nav' %>
 			</div>
 		</div>
 		<div id='top_nav'>
-			<%= render 'layouts/application/top_nav' %>
+			<%= render 'layouts/top_nav', :nav_menu => church_nav %>
 		</div>
 		
 		<%= yield %>

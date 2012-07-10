@@ -1,0 +1,17 @@
+<div class='top_right_controls'>
+  <%= link_to 'Add New Image', new_image_path(:image_type => 'background_image'), :class => 'btn btn-info', :id => 'new_image_link' %>
+</div>
+
+<div class="field">
+  <%= f.label :choose_image %>
+	<% Image.background_images.all.each do |image| %>
+   <div class="image_widget_form_item">
+		<div class="image_widget_form_item_details">
+			<%= radio_button_tag 'background_image_widget[image_id]', image.id, widget.image == image %>
+	    <%= label_tag image.name %>			
+		</div>
+		<%= image_tag image.cover_image.thumb('x100').url %><br />
+   </div>
+	<% end %>
+	<div class="spacer"></div>
+</div>

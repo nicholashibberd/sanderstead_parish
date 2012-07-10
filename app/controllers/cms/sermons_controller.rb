@@ -3,7 +3,7 @@ module Cms
     #layout 'application'
   
     def index
-      @sermons = Sermon.by_group_and_month(@group, params[:month])
+      @sermons = Sermon.by_church_and_month(@group, params[:month])
     end
   
     def edit

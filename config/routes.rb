@@ -1,20 +1,29 @@
 SandersteadParish::Application.routes.draw do
   mount Cms::Engine => "/cms"
+
   scope '(groups/:group_id)' do
     resources :sermons, :only => [:show, :index]
     resources :notices, :only => [:show, :index]
   end
-  #scope '/cms/(groups/:group_id)' do
-    #resources :sermons
-  #end
-  #get 'sermons/:id', :to => 'sermons#show', :as => :main_sermon
+
   namespace :cms do
+    scope ':group_id' do
+      resources :pages do
+        resources :widgets
+      end
+    end
+    #resources :churches do
+      #resources :church_pages, :path => 'pages' do
+        #resources :widgets
+      #end
+    #end 
+    
     scope '(groups/:group_id)' do
       resources :sermons
       resources :notices
     end
+    resources :events
   end
-  get 'churches/:church_id/pages/:id', :to => 'pages#show', :as => :church_page
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

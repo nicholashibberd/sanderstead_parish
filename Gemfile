@@ -6,6 +6,7 @@ gem 'bson_ext'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 #gem "cms", :git => "git://github.com/nicholashibberd/cms.git", :ref => '30c84a241c'
 gem "cms", :path => "../simple_cms"
+#gem "cms", :path => "../cms"
 
 # Gems used only for assets and not required
 # in production environments by default.

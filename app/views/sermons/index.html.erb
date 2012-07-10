@@ -4,7 +4,7 @@
 
 		<div class="row" id="row0">
 			<div class="span8 column" id="column0">
-				<% Sermon.by_group_and_month(@group, params[:month]).each do |sermon| %>
+				<% Sermon.by_church_and_month(@group, params[:month]).each do |sermon| %>
 					
 					<div class="article">
 						<div class="article_title">
@@ -14,14 +14,7 @@
 						<div class="article_content">
 							<%= truncate_html sermon.content, :length => 800, :omission => link_to(' ...(read more)', main_app.sermon_path(@group, sermon)) %>
 						</div>
-						<div class="article_details">
-							<div class="article_author">
-								By <%= sermon.person.name %> on <%= l sermon.date, :format => :long %>
-							</div>
-						</div>
 					</div>
-					
-					<%#= render :partial => 'sermons/sermon', :locals => {:sermon => sermon, :snippet_size => 300} %>
 				<% end %>
 			</div>
 			<div class="span4 column" id="column1">

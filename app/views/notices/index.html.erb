@@ -4,17 +4,12 @@
 
 		<div class="row" id="row0">
 			<div class="span8 column" id="column0">
-				<% Notice.by_group_and_month(@group, params[:month]).each do |notice| %>
+				<% Notice.by_church_and_month(@group, params[:month]).each do |notice| %>
 					
 					<div class="article">
 						<div class="article_title">
 							<%= date_icon(notice.date).html_safe %>
 							<h2><%= link_to notice.title, main_app.notice_path(@group, notice) %></h2>
-						</div>
-						<div class="article_details">
-							<div class="article_author">
-								By <%= notice.person.name %> on <%= l notice.date, :format => :long %>
-							</div>
 						</div>
 					</div>
 					

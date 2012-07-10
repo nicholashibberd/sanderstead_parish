@@ -2,7 +2,7 @@ module Cms
   class NoticesController < Cms::AdminController
   
     def index
-      @notices = Notice.by_group_and_month(@group, params[:month])
+      @notices = Notice.by_church_and_month(@group, params[:month])
     end
   
     def edit
