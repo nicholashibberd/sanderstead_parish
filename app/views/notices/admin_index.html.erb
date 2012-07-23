@@ -1,0 +1,23 @@
+<div class="top_right_controls">
+	<%= link_to "New Notice", new_admin_notice_path(@church), :class => 'btn btn-info' %>
+</div>
+
+<div class="page_header">
+	<h1>Notices</h1>
+</div>
+
+<section class="page_content">
+	<% @notices.each do |notice| %>
+		<div class="index_item page_index_item">
+			<div class="controls">
+				<%= link_to 'Delete', admin_notice_path(@church, notice), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-danger' %>				
+				<%= link_to 'Edit', edit_admin_notice_path(@church, notice), :class => 'btn btn-warning' %>							
+				<%= link_to 'View', notice_path(@church, notice), :class => 'btn' %>
+			</div>
+			<%= link_to notice.title, edit_admin_notice_path(@church, notice) %>			
+			<div>
+				<%= l notice.date, :format => :long %>
+			</div>
+		</div>
+	<% end %>
+</section>

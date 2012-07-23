@@ -1,6 +1,7 @@
 class Event 
   include Mongoid::Document
   include Mongoid::MultiParameterAttributes
+  default_scope asc(:start_time)  
   
   belongs_to :event_series
   belongs_to :church
@@ -23,7 +24,7 @@ class Event
 
   scope :upcoming, where(:start_time.gte => Time.now).asc(:start_time)
   scope :by_category, lambda {|category| where(:category => category)}
-  scope :by_church, lambda {|group_id| where(:group_id => group_id)}
+  scope :by_church, lambda {|church_id| where(:church_id => church_id)}
   
   #def find_events_by_month(month)
     #events.select {|event| event.start_date.month == month}
@@ -74,12 +75,12 @@ class Event
     upcoming_events.group_by {|event| event.start_date}
   end  
   
-  def self.grouped_by_day(category, group_id)
+  def self.grouped_by_day(category, church_id)
     events = self.upcoming
     unless category == 'All'
       events = events.by_category(category) if category
     end
-    events = events.by_church(group_id) if group_id
+    events = events.by_church(church_id) if church_id
     events.group_by {|event| event.start_date}
   end    
 end

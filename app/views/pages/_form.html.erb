@@ -1,0 +1,51 @@
+<%= form_for @page, {:url => path_for_page(@church, @page)} do |f| %>
+	<div class='field'>
+	   <div>
+	    <%= f.label :name %>
+	  </div>
+	   <div>
+	    <%= f.text_field :name %>
+	  </div>
+	</div>
+	<div class='field'>
+	   <div>
+	    <%= f.label :title_tag %>
+	  </div>
+	   <div>
+	    <%= f.text_field :title %>
+	  </div>
+	</div>
+	
+	<% if groups? %>
+		<%= render 'group_fields', :f => f %>
+	<% end %>
+	
+	<div class="field">
+		<%= label_tag @page.layout %>
+	</div>
+	
+	<% if layouts && @page.new_record? %>
+		<div id="layouts" class="field">
+			 <div>
+		    <%= f.label :layouts %>
+		  </div>
+			<% layouts.in_groups_of(3) do |group| %>
+				<div class="template_row">
+					<% group.compact.each do |layout| %>
+					   <div class="template_item">
+							<%#= f.radio_button :layout, layout, {:checked => layout == @page.layout} %>
+							<%= link_to (image_tag "layouts/#{layout}.jpg"), "#", :id => layout, :class => 'layout_item' %>
+					  </div>
+					<% end %>
+				</div>
+			<% end %>
+			 <div>
+		    <%= f.text_field :layout %>
+		  </div>
+		</div>
+	<% end %>
+	
+	<div class='field'>
+	  <%= f.submit :class => 'btn btn-success' 'Save', :class => 'btn btn-success' %>
+	</div>
+<% end %>

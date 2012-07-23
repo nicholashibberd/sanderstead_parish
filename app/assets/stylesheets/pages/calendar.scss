@@ -1,0 +1,59 @@
+@import 'cms/mixins';
+
+/***********************************
+Calendar
+***********************************/
+#calendar #date_bar {
+	margin-top: 10px;
+	h2 { text-align: center; }
+	#calendar_previous_link { float: left; margin-top: 10px; font-size: 16px; }
+	#calendar_next_link { float: right; margin-top: 10px; font-size: 16px; }
+}
+
+#calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+tr.month_names {
+	font-size: 20px;
+}
+
+#calendar td {
+	width: 120px;
+	border: 1px solid #9FC7E6;
+	vertical-align: top;
+	padding: 5px;
+}
+
+#calendar td.day {
+	font-weight: bold;
+}
+
+#calendar tr.day_without_events td {
+	background: #CFE2EB;				
+  /*@include gradiented(#F6E290, #FCD436);	*/
+}
+
+#calendar td {
+	background: #EEF9FF url(backgrounds/calendar_day_without_events.jpg) repeat-x;				
+  @include gradiented(#F9FDFF, #EEF9FF);	
+}
+
+#calendar .calendar_day_marker {
+	color: #9FC7E6;
+}
+
+#calendar td.otherMonth {
+	background-color: #E1EFF3;
+}
+
+#calendar .calendar_event {
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.calendar_event .event_time {
+	color: #666;
+}

@@ -1,0 +1,20 @@
+<div class='top_right_controls'>
+  <%= link_to 'New page', new_page_path(@church), :class => 'btn btn-info' %>
+</div>
+
+<div class="page_header">
+	<h1>Pages</h1>
+</div>
+
+<section class="page_content">
+	<% @pages.each do |page| %>
+    <div class="index_item">
+			<div class="controls">
+				<%= link_to 'Delete', page_path(@church, page), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-danger' %>											
+				<%= link_to "Edit", edit_page_path(@church, page), :class => 'btn btn-warning' %>				
+				<%= link_to 'View', page_show_path(@church, page), :class => 'btn' %>	
+			</div>
+			<%= link_to page.name, edit_page_path(@church, page) %>
+		</div>
+	<% end %>
+</section>

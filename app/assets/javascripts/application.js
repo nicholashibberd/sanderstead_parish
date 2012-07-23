@@ -4,5 +4,7 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require_self
-//= require 'cms'
+//= require jquery-1.7.1.min.js
+//= require jquery_ujs
+//= require twitter/bootstrap
+//= require slimbox2.js

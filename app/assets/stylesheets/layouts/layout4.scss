@@ -1,21 +1,9 @@
 body#sanderstead_parish {
-	background: #fff;
 	#layout4 {
-		#background_image { position: relative; z-index: 0 }
 		#main_content { 
-			margin-top: -75px;
 			z-index: 1;
 			position: relative;
-			background: url(../backgrounds/layout1_content.png) no-repeat;		
-			
-			.region { 
-				clear: both;
-				min-height: 125px;
-				
-				.region_images { float: left; width: 125px; }
-				.region_text { margin-left: 125px;}
-			 }
-			
+			background: url(../backgrounds/no_background_content.png) repeat-x;		
 		}
 	}
 }

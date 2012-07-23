@@ -1,0 +1,15 @@
+body#sanderstead_parish {
+	#layout2 {
+		#background_image { position: relative; z-index: 0 }
+		#main_content { 
+			margin-top: -300px;
+			z-index: 1;
+			position: relative;
+			background: url(../backgrounds/sidebar_content.png) no-repeat;		
+			#main { float: left; width: 540px; padding-top: 260px; 
+			}
+			
+			#sidebar { margin-left: 580px; width: 325px; padding-top: 30px; }			
+		}
+	}
+}

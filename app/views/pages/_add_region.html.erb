@@ -1,0 +1,15 @@
+<div id="add_region" class="admin_region">
+	<h2>Add region</h2>
+	<%#= form_tag '/cms/pages/add_region' do %>
+	<%= form_tag '/add_region' do %>
+		<%= hidden_field_tag :page_id, @page.id %>
+		<%= hidden_field_tag :repeating, true if repeating %>
+		<div>
+			<%= text_field_tag :region %>
+		</div>
+		<div>
+			<%= submit_tag 'Text', :class => 'btn btn-info' %>
+			<%= submit_tag 'Image', :class => 'btn btn-info' %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,16 @@
+body#sanderstead_parish {
+	#people {
+		#main_content { 
+			z-index: 1;
+			position: relative;
+			background: url(../backgrounds/no_background_content.png) repeat-x;		
+			margin-top: -20px;
+			#repeating_regions {
+				.region {
+					.region_images { float: left; width: 120px; }
+					.region_text { margin-left: 125px; }
+				}
+			}
+		}
+	}
+}

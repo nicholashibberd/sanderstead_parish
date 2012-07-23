@@ -1,0 +1,41 @@
+<div id="calendar">
+	<div id="main_content" class="container">
+		<h1>Parish Calendar</h1>
+		<%= render_calendar do |calendar| %>
+			<div id="date_bar">
+				<%= link_to calendar.month('previous'), "/parish/calendar?date=#{calendar.previous_month.strftime('%Y-%m-%d')}", :id => "calendar_previous_link" %>
+				<%= link_to calendar.month('next'), "/parish/calendar?date=#{calendar.next_month.strftime('%Y-%m-%d')}", :id => "calendar_next_link" %>
+				<h2><%= calendar.month('current') %></h2>
+			</div>
+			<table>
+				<th></th>
+				<th>All Saints</th>
+				<th>St Mary's</th>
+				<th>St Edmund's</th>
+				<th>St Antony's</th>
+				<th>Parish</th>
+				<% calendar.events_by_day.each do |day, events| %>
+					<tr class="<%= calendar.events_today?(day) %>">
+						<td class="day">
+							<%= date_icon(day).html_safe %>
+							<%= day.strftime('%A') %>
+						</td>
+						
+						<% ['all-saints', 'st-marys', 'st-edmunds', 'st-antonys', 'parish'].each do |church| %>
+							<td>
+								<% if events && events[church] %>
+									<% events[church].each do |event| %>
+										<div class="calendar_event">
+											<span class="strong"><%= event.start_time.strftime('%H:%M') %></span>: <%= event.title %>
+										</div>
+									<% end %>
+								<% end %>
+							</td>
+						<% end %>
+						
+					</tr>
+				<% end %>
+			</table>
+		<% end %>
+	</div>
+</div>

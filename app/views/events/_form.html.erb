@@ -1,0 +1,45 @@
+<%= form_for @event, :url => @path do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :church %>
+    <%= f.select :church_id, church_options_for_select(@event) %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field datetime_field">
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time, :default => 24.hours.from_now, :minute_step => 15 %>
+  </div>
+  <div class="field">
+	  <%=f.label :period, "Repeats" %>
+	  <%=f.select :period, Event::REPEATS,{}, :onchange => "showPeriodAndFrequency(this.value);" %>
+	</div>
+	<div id="frequency" style="display:none;" class="field">
+  	<%=f.label :frequency, "Repeat every" %>
+	  <%=f.select :frequency, (1..30).to_a %> <span id = "period"></span>
+	</div>
+	<div id="position" style="display:none;" class="field">
+  	<%=f.label :position, "Repeat every" %>
+	  <%=f.select :position, ([['First', 0], ['Second', 1], ['Third', 2], ['Fourth', 3], ['Last', -1]]) %> <span id = "period_other"></span>
+	</div>
+	<div class="field" style="display:none;" id="end_date">
+    <%= f.label :until %>
+    <%= f.datetime_select :end_time, :default => 24.hours.from_now, :minute_step => 10 %>
+  </div>
+  <div class="field datetime_field">
+    <%= f.label :description %>
+    <%= f.text_area :content, :class => "ckeditor" %>
+  </div>
+	<p>
+	  <%=f.label :category %>
+	  <%=f.select :category, Event::CATEGORIES,{} %>
+	</p>
+  <div class="button confirm_button">
+    <%= f.submit :class => 'btn btn-success' %>
+  </div>
+<% end %>

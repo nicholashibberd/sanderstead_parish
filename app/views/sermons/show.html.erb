@@ -1,12 +1,11 @@
 <div id="article" class="no_background_image">
 	<div class="container <%= request[:controller] %>_<%= request[:action] %>_content">
-		<%= render 'layouts/application/flash', :flash => flash %>
 
 			<div class="row" id="row0">
 				<div class="span8 column" id="column0">
 					<div class="article">
 						<div class="article_title">
-							<%= date_icon(@sermon.date).html_safe %>
+							<%= date_icon(@sermon.date).html_safe %>							
 							<h2><%= link_to @sermon.title, @sermon %></h2>
 						</div>
 						<div class="article_content">

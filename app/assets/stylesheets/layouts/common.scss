@@ -1,5 +1,12 @@
 body#sanderstead_parish {
+	.no_background { background: url(../backgrounds/no_background_content.png) repeat-x; }
 	#main_content {
 		padding: 30px 110px; 
 	}
+	
+	.gallery_item {
+		float: left; margin: 0 20px 20px 0;
+	}
+	
+	.widget { margin-bottom: 20px; }
 }

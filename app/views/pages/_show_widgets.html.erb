@@ -1,0 +1,3 @@
+<% widgets.each do |widget| %>
+	<%= render "widgets/show/#{widget.widget_type}", :widget => widget %>
+<% end %>

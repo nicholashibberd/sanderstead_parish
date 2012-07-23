@@ -1,4 +1,0 @@
-<%= link_to 'Parish', root_path %>
-<% Church.all.each do |church| %>
-	<%= link_to church.name, group_homepage_path(church.slug) %>
-<% end %>

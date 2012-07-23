@@ -35,7 +35,7 @@ class EventSeries
     days = recurrence_period(period).is_a?(Integer) ? repeating_days_every_month : repeating_days_at_regular_intervals
     days.each do |day|
       st = DateTime.parse("#{start_time.hour}:#{start_time.min}:#{start_time.sec}, #{day.day}-#{day.month}-#{day.year}")
-      self.events.create(:title => title, :description => description, :all_day => all_day, :start_time => st, :category => category, :group_id => group_id, :location => location)
+      self.events.create(:title => title, :description => description, :all_day => all_day, :start_time => st, :category => category, :church_id => church_id, :location => location)
     end
   end
 

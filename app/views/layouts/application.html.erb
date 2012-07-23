@@ -16,7 +16,11 @@
 				</div>
 			</div>
 			<div id="parish_nav">
-				<%#= render 'layouts/parish_nav' %>
+				<%= link_to 'Parish', root_path %>
+				<%= link_to 'All Saints', '/all-saints' %>
+				<%= link_to "St Mary's", '/st-marys' %>
+				<%= link_to "St Edmund's", '/st-edmunds' %>
+				<%= link_to "St Antony's", '/st-antonys' %>
 			</div>
 		</div>
 		<div id='top_nav'>
@@ -24,7 +28,6 @@
 		</div>
 		
 		<%= yield %>
-
 
 	</div>
 	<div id="footer">

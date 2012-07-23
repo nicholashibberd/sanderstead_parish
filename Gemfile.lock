@@ -4,23 +4,6 @@ GIT
   specs:
     nested_form (0.2.0)
 
-PATH
-  remote: ../simple_cms
-  specs:
-    cms (0.0.1)
-      bson_ext
-      dragonfly (= 0.9.10)
-      jquery-rails
-      later_dude
-      mongoid-paperclip
-      nested_form
-      rack-cache
-      rails (~> 3.1)
-      redcarpet
-      tinymce-rails
-      truncate_html
-      twitter-bootstrap-rails
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -185,11 +168,18 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   capistrano
-  cms!
   coffee-rails (~> 3.1.0)
+  dragonfly (= 0.9.10)
   jquery-rails
+  later_dude
   mongoid
+  mongoid-paperclip
   nested_form!
+  rack-cache
   rails (= 3.1.0)
+  redcarpet
   sass-rails (= 3.1.5)
+  tinymce-rails
+  truncate_html
+  twitter-bootstrap-rails
   uglifier

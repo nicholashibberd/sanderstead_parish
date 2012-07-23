@@ -1,0 +1,12 @@
+body#sanderstead_parish {
+	#layout3 {
+		#main_content { 
+			z-index: 1;
+			position: relative;
+			background: url(../backgrounds/no_background_content.png) repeat-x;
+			#right { background: #D8E7EF;
+				.widget { margin: 20px 0 0 20px; }
+			}
+		}
+	}
+}

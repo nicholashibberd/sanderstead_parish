@@ -1,0 +1,22 @@
+<div class="top_right_controls">
+	<%= link_to 'New Event', new_event_path(@church), :class => 'btn btn-info' %>
+</div>
+
+<div class="page_header">
+	<h1>Events</h1>
+</div>
+
+<section class="page_content">
+	<% @events.each do |event| %>
+		<div class="index_item page_index_item">
+			<div class="controls">
+				<%= link_to 'Delete', event_path(@church, event), :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-danger' %>				
+				<%= link_to 'Edit', edit_event_path(@church, event), :class => 'btn btn-warning' %>
+			</div>
+			<%= link_to event.title, edit_event_path(@church, event) %>
+			<div class='event_details'>
+				<%= event.category %> | <%= l event.start_date, :format => :long %>
+			</div>
+		</div>
+	<% end %>
+</section>

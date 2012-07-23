@@ -1,0 +1,36 @@
+<div class="top_right_controls">
+	<%= link_to 'View page', page_show_path(@church, @page), :class => 'btn' %>
+</div>
+
+<div class="page_header">
+	<h1><%= @page.name %></h1>
+</div>
+
+<section class="page_content">
+	<%= render 'form' %>
+	<%= render_layout(@page) %>
+</section>
+
+<%= javascript_tag do %>
+	var regions = $('.admin_region');
+  regions.each(function(index) {
+		makeSortable($(this));
+	});
+	
+	function makeSortable(element) {
+		element.sortable(
+	  	{	axis: 'y', 
+	  		dropOnEmpty:false, 
+	     	items: '.admin_widget',
+	     	scroll: true,
+	      update: function(){
+	        $.ajax({
+	       	 type: 'post', 
+	         data: element.sortable('serialize') + '&page_id=<%= @page.id-%>' + '&region=' + element.attr('id'),
+	         dataType: 'script', 
+	         url: '/order_widgets'
+				  })
+	      }	
+		})
+	}
+<% end %>

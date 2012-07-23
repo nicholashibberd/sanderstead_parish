@@ -32,7 +32,15 @@ class Church
   end
   
   def pages
-    Page.by_group(slug)
+    Page.by_church(slug)
   end
   
+  def sermons
+    Sermon.by_church(slug)
+  end
+  
+  def notices
+    Notice.by_church(slug)
+  end
+    
 end

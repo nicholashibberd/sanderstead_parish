@@ -5,13 +5,14 @@ class Article
   field :title
   field :content
   field :date, :type => Date, :default => Date.today
+  field :church_id
   field :group_id
   
-  scope :by_church, lambda { |group_id| where(:group_id => group_id)}
+  scope :by_church, lambda { |church_id| where(:church_id => church_id)}
   
-  def self.by_church_and_month(group, month)
+  def self.by_church_and_month(church, month)
     sermons = self.all
-    sermons = sermons.by_group(group.id) if group
+    sermons = sermons.by_church(church.slug) if church    
     sermons = sermons.select {|a| a.date.strftime('%m-%Y') == month} if month
     sermons
   end

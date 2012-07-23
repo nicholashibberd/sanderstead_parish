@@ -1,8 +1,7 @@
 module ApplicationHelper
   def logo
-    if @group
-    #if @page && @page.group
-      link_to image_tag("/assets/#{@group.slug}-logo.png"), root_path
+    if @church
+      link_to image_tag("/assets/#{@church.slug}-logo.png"), root_path
     else
       link_to image_tag("parish-logo.png"), root_path
     end
@@ -28,6 +27,30 @@ module ApplicationHelper
     end
     NavMenu.find_by_slug(slug) rescue NavMenu.first
   end  
+  
+  def current_controller
+    request[:controller].gsub('cms/', '')
+  end
+  
+  def show_editing_tools?
+    request[:action] == 'edit'
+  end
+  
+  def layouts
+    dir = Dir.new(Rails.root.join("app", "assets", "images", "layouts")) rescue nil
+    file_names = dir.entries
+    file_names.delete_if { |file_name| [".", "..", ".DS_Store"].include?(file_name)  }
+    file_names.map {|file_name| file_name.chomp(File.extname(file_name)) }
+  end
+  
+  def groups?
+    Site.instance.has_groups
+  end
+  
+  def host_page_path(page)
+    "/pages/#{page.slug}"
+  end
+  
   
   def region(region, &proc)
     name = region.is_a?(Hash) ? region[:name] : region
@@ -74,7 +97,7 @@ module ApplicationHelper
   end
   
   def add_region
-    render 'cms/pages/add_region', :repeating => true
+    render 'pages/add_region', :repeating => true
   end
   
   class Region
@@ -88,14 +111,10 @@ module ApplicationHelper
     end
     
     def images
-      #template.render_widgets(name, page.widgets.by_region(name).by_type('ImageWidget'), ['image'])
-      #template.render_widgets(name, widgets(:widget_type => 'ImageWidget'), ['image'])
       render(name, widgets(:widget_type => 'ImageWidget'), ['image'])
     end
 
     def text
-      #template.render_widgets(name, page.widgets.by_region(name).by_type('TextWidget'), ['text'])
-      #template.render_widgets(name, widgets(:widget_type => 'TextWidget'), ['text'])
       render(name, widgets(:widget_type => 'TextWidget'), ['text'])
     end
     
@@ -103,9 +122,13 @@ module ApplicationHelper
       render(name, widgets(:widget_type => 'MapWidget'), ['map'])
     end
     
+    def gallery
+      render(name, widgets(:widget_type => 'GalleryWidget'), ['gallery'])
+    end
+    
     def all
       #template.render_widgets(name, widgets, ['text', 'image'])
-      widget_types = @options[:widget_types] || ['text', 'image']
+      widget_types = @options[:widget_types] || ['text', 'image', 'gallery', 'events', 'map']
       render(name, widgets, widget_types)
     end   
     
@@ -118,11 +141,7 @@ module ApplicationHelper
       widgets = widgets.by_type(options[:widget_type]) if options[:widget_type]
       widgets
     end
-    
-    def host_page_path(page)
-      '/test'
-    end
-    
+      
   end  
   
 end

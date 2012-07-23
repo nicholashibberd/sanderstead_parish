@@ -355,59 +355,6 @@ Profile Widget
 	margin-bottom: 20px;
 }
 
-/***********************************
-Calendar
-***********************************/
-
-#calendar {
-	margin-top: 30px;
-}
-
-#calendar table {
-	width: 100%;
-	border-collapse: collapse;
-	margin-top: -20px;
-}
-
-tr.month_names {
-	font-size: 20px;
-}
-
-#calendar td {
-	width: 120px;
-	border: 1px solid #9FC7E6;
-	vertical-align: top;
-	height: 110px;
-	padding: 5px;
-}
-
-#calendar td.calendar_day_with_events {
-	background: #FCD436 url(backgrounds/calendar_day_with_events.jpg) repeat-x;				
-  @include gradiented(#F6E290, #FCD436);	
-}
-
-#calendar td.calendar_day_without_events {
-	background: #EEF9FF url(backgrounds/calendar_day_without_events.jpg) repeat-x;				
-  @include gradiented(#F9FDFF, #EEF9FF);	
-}
-
-#calendar .calendar_day_marker {
-	color: #9FC7E6;
-}
-
-#calendar td.otherMonth {
-	background-color: #E1EFF3;
-}
-
-#calendar .calendar_event {
-	padding: 5px;
-	margin-bottom: 10px;
-}
-
-.calendar_event .event_time {
-	color: #666;
-}
-
 .events_widget h2 {
 	margin-bottom: 10px;
 }

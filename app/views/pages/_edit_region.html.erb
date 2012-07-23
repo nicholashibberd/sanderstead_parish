@@ -1,0 +1,11 @@
+<div class="admin_region" id="<%= region %>">
+	<h2><%= region.titleize %></h2>
+	<% widgets.each do |widget| %>
+		<div class="admin_widget <%= region %>_widget" id="widget_<%= widget.id %>">
+			<%= render "widgets/show/#{widget.widget_type}", :widget => widget %>
+			<%= link_to 'Edit', edit_page_widget_path(@page, widget), :class => 'btn btn-warning' %>
+		</div>
+	<% end %>
+	
+	<%= render 'widgets/add_widget_controls', :region => region %>
+</div>

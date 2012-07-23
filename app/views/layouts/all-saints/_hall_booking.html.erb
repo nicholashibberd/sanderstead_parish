@@ -1,0 +1,63 @@
+<div id="layout3">
+	<div id="main_content" class="container">
+		<div class="intro">
+			<%= region('intro') %>
+		</div>
+		
+		<section class="hall_booking_section">
+			<h2>Large Hall</h2>
+			
+			<%= region('large_hall') do |region| %>
+			  <div class="region_left">
+ 					<%= region.gallery %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>						
+		</section>
+
+		<section class="hall_booking_section">
+			<h2>Small Hall</h2>
+			
+			<%= region('small_hall') do |region| %>
+			  <div class="region_left">
+ 					<%= region.gallery %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>						
+		</section>
+		
+		<section class="hall_booking_section">
+			<h2>Garden Room</h2>
+			
+			<%= region('garden_room') do |region| %>
+			  <div class="region_left">
+ 					<%= region.gallery %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>						
+		</section>
+		
+		<section class="hall_booking_section">
+			<h2>Kitchen</h2>
+			
+			<%= region('kitchen') do |region| %>
+			  <div class="region_left">
+ 					<%= region.gallery %>
+ 			  </div>
+ 				<div class="region_right">
+					<%= region.text %>
+ 			  </div>
+			<% end %>						
+		</section>
+		
+		
+		
+		<div class="spacer"></div>
+	</div>
+</div>

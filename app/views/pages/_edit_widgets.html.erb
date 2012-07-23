@@ -1,0 +1,7 @@
+<% widgets.each do |widget| %>
+	<div class="admin_widget <%= region %>_widget" id="widget_<%= widget.id %>">
+		<%= render "widgets/show/#{widget.widget_type}", :widget => widget %>
+		<%= link_to 'Edit', edit_page_widget_path(@church, @page, widget), :class => 'btn btn-warning' %>
+	</div>
+<% end %>
+<%= render 'widgets/add_widget_controls', :region => region, :widget_types => widget_types %>

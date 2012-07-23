@@ -1,0 +1,100 @@
+<div id="parish_home">
+	<div id="background_image">
+		<%= region(BACKGROUND_IMAGE) %>
+	</div>
+	<div id="main_content" class="container">
+		<div id="left">
+			<div id="intro">
+				<%= region('intro') %>
+			</div>
+			<div id="churches">
+				
+				<div class="church">
+					<%= region('all-saints') do |region| %>
+						<div class="church_image">
+							<%= region.images %>
+						</div>
+						<div class="church_text">
+							<%= region.text %>
+						</div>
+					<% end %>
+				</div>
+
+				<div class="church">
+					<%= region('st-marys') do |region| %>
+						<div class="church_image">
+							<%= region.images %>
+						</div>
+						<div class="church_text">
+							<%= region.text %>
+						</div>
+					<% end %>
+				</div>
+				
+				<div class="church">
+					<%= region('st-edmunds') do |region| %>
+						<div class="church_image">
+							<%= region.images %>
+						</div>
+						<div class="church_text">
+							<%= region.text %>
+						</div>
+					<% end %>
+				</div>
+				
+				<div class="church">
+					<%= region('st-antonys') do |region| %>
+						<div class="church_image">
+							<%= region.images %>
+						</div>
+						<div class="church_text">
+							<%= region.text %>
+						</div>
+					<% end %>
+				</div>
+				
+			</div>
+		</div>
+		<div id="right">
+			<%= region(EVENTS) %>
+		</div>
+		<div class="spacer"></div>
+		<div id="bottom" class="clearfix">
+			<h1>The Sanderstead Parish Community</h1>
+			
+			<div class="feature">
+				<%= region('feature1') do |region| %>
+					<div class="feature_image">
+						<%= region.images %>
+					</div>
+					<div class="feature_image">
+						<%= region.text %>
+					</div>
+				<% end %>
+			</div>
+			
+			<div class="feature">
+				<%= region('feature2') do |region| %>
+					<div class="feature_image">
+						<%= region.images %>
+					</div>
+					<div class="feature_image">
+						<%= region.text %>
+					</div>
+				<% end %>
+			</div>
+			
+			<div class="feature">
+				<%= region('feature3') do |region| %>
+					<div class="feature_image">
+						<%= region.images %>
+					</div>
+					<div class="feature_image">
+						<%= region.text %>
+					</div>
+				<% end %>
+			</div>
+			
+		</div>
+	</div>
+</div>

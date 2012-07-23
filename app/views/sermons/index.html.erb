@@ -1,18 +1,18 @@
 <div id="article" class="no_background_image">
 	<div class="container <%= request[:controller] %>_<%= request[:action] %>_content">
-		<%= render 'layouts/application/flash', :flash => flash %>
+		<%#= render 'layouts/application/flash', :flash => flash %>
 
 		<div class="row" id="row0">
 			<div class="span8 column" id="column0">
-				<% Sermon.by_church_and_month(@group, params[:month]).each do |sermon| %>
+				<% @sermons.each do |sermon| %>
 					
 					<div class="article">
 						<div class="article_title">
 							<%= date_icon(sermon.date).html_safe %>
-							<h2><%= link_to sermon.title, main_app.sermon_path(@group, sermon) %></h2>
+							<h2><%= link_to sermon.title, sermon_path(@church, sermon) %></h2>
 						</div>
 						<div class="article_content">
-							<%= truncate_html sermon.content, :length => 800, :omission => link_to(' ...(read more)', main_app.sermon_path(@group, sermon)) %>
+							<%= truncate_html sermon.content, :length => 800, :omission => link_to(' ...(read more)', sermon_path(@church, sermon)) %>
 						</div>
 					</div>
 				<% end %>
