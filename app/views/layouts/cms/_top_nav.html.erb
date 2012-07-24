@@ -1,9 +1,76 @@
-<% nav_menu = NavMenu.admin_nav %>
-
-<% if nav_menu %>
-	<nav>
-		<% nav_menu.nav_items.each do |nav_item| %>
-			<%= admin_nav_link(nav_item) %>
+<div class="subnav">
+	<div id="status">
+		<% if current_user %>
+			<%= current_user.name %> &nbsp; <%= link_to "Sign out", signout_path, :id => 'signout_link' %>
+		<% else %>
+			<%= link_to 'Sign in', signin_path %>						
 		<% end %>
-	</nav>	
-<% end %>
+	</div>
+	
+	<ul class="nav nav-pills">
+	  <li class="dropdown" id="menu1">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+	      Pages
+	      <b class="caret"></b>
+	    </a>
+	    <ul class="dropdown-menu">
+	      <li><a href="/admin/parish/pages">Parish</a></li>
+	      <li><a href="/admin/all-saints/pages">All Saints</a></li>
+	      <li><a href="/admin/st-marys/pages">St Mary's</a></li>
+	      <li><a href="/admin/st-edmunds/pages">St Edmund's</a></li>
+	      <li><a href="/admin/st-antonys/pages">St Antony's</a></li>
+	    </ul>
+	  </li>
+	
+	  <li class="dropdown" id="menu2">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu2">
+	      Sermons
+	      <b class="caret"></b>
+	    </a>
+	    <ul class="dropdown-menu">
+	      <li><a href="/admin/parish/sermons">Parish</a></li>
+	      <li><a href="/admin/all-saints/sermons">All Saints</a></li>
+	      <li><a href="/admin/st-marys/sermons">St Mary's</a></li>
+	      <li><a href="/admin/st-edmunds/sermons">St Edmund's</a></li>
+	      <li><a href="/admin/st-antonys/sermons">St Antony's</a></li>
+	    </ul>
+	  </li>
+
+	  <li class="dropdown" id="menu3">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3">
+	      Notices
+	      <b class="caret"></b>
+	    </a>
+	    <ul class="dropdown-menu">
+	      <li><a href="/admin/parish/notices">Parish</a></li>
+	      <li><a href="/admin/all-saints/notices">All Saints</a></li>
+	      <li><a href="/admin/st-marys/notices">St Mary's</a></li>
+	      <li><a href="/admin/st-edmunds/notices">St Edmund's</a></li>
+	      <li><a href="/admin/st-antonys/notices">St Antony's</a></li>
+	    </ul>
+	  </li>
+
+	  <li class="dropdown" id="menu4">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu4">
+	      Links
+	      <b class="caret"></b>
+	    </a>
+	    <ul class="dropdown-menu">
+	      <li><a href="/admin/nav_menus/4feabb5ce35eb72e1c000001/nav_items">Parish</a></li>
+	      <li><a href="/admin/nav_menus/4feab906e35eb72dee000002/nav_items">All Saints</a></li>
+	      <li><a href="/admin/nav_menus/4feab922e35eb72dee000006/nav_items">St Mary's</a></li>
+	      <li><a href="/admin/nav_menus/4feab912e35eb72dee000004/nav_items">St Edmund's</a></li>
+	      <li><a href="/admin/nav_menus/4feab92ee35eb72dee000008/nav_items">St Antony's</a></li>
+	    </ul>
+	  </li>
+	
+	  <li>
+	    <a href="/admin/images">Images</a>
+	  </li>
+
+	  <li>
+	    <a href="/admin/users">Users</a>
+	  </li>
+	
+	</ul>	
+</div>	

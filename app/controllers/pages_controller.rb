@@ -21,6 +21,10 @@ class PagesController < AdminController
   def index
     @pages = @church.pages.all
   end
+  
+  def all_pages
+    @churches = Church.all
+  end
 
   def create
     raise params[:page].inspect

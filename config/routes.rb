@@ -15,6 +15,7 @@ SandersteadParish::Application.routes.draw do
         get :change_password
       end
     end
+    match '/pages', :to => 'pages#all_pages'
   end
   
   resources :sessions, :only => [:create]
