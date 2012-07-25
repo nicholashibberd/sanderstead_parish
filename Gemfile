@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
