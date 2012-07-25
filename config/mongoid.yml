@@ -13,8 +13,3 @@ production:
   max_retries_on_connection_failure: 20
   persist_in_safe_mode: true
   skip_version_check: true
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019

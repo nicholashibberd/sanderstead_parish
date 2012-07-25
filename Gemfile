@@ -13,7 +13,6 @@ gem "twitter-bootstrap-rails"
 gem "later_dude"
 gem "truncate_html"
 gem "rack-cache"
-gem "tinymce-rails"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
 gem "fog", "~> 1.3.1"
