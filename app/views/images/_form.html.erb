@@ -5,7 +5,8 @@
   </div>
 	<div class="field">
     <%= f.label :image_file %>
-    <%= f.file_field :cover_image %>
+    <%= f.file_field :file %>
+    <%= f.hidden_field :file_cache %>
   </div>
 	<div class="field">
     <%= f.label :image_type %>
@@ -13,7 +14,7 @@
   </div>
 	<% unless @image.new_record? %>
 	 	<div>
-			<%= image_tag @image.cover_image.thumb('x100').url %>
+			<%#= image_tag @image.cover_image.thumb('x100').url %>
 		</div>
 	<% end %>
 

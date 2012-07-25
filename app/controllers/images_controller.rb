@@ -13,6 +13,7 @@ class ImagesController < AdminController
     if image.save
   		redirect_to images_path, :notice => "Successfully created image"
     else
+      raise image.errors.inspect
       flash[:error] = "There was an error creating the image"
       redirect_to images_path
     end

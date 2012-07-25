@@ -41,13 +41,11 @@ SandersteadParish::Application.routes.draw do
   get '/admin/:church_id', :to => 'admin#church_home', :as => :admin_church_home
 
   # Routes in the host application
-  #get '../pages/:id', :to => 'pages#show'     
-  #match '../media/:file_name', :to => Dragonfly[:images]  
+  #get '../pages/:id', :to => 'pages#show'
   
   
   # Routes in the host application
   get '/pages/:id', :to => 'pages#show'
-  match '/media/:file_name', :to => Dragonfly[:images]
   match '/', :to => 'pages#home', :as => :root
   match '/test', :to => 'pages#test', :as => :test
   
