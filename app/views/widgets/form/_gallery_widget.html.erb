@@ -14,7 +14,7 @@
 					<%= check_box_tag 'gallery_widget[image_ids][]', image.id, widget.images.include?(image) %>
 			
 				</div>
-				<%= image_tag image.cover_image.thumb('x100').url %><br />
+				<%= image_tag image.image.file.url %><br />
 	    </div>
 			<% end %>
 		</div>

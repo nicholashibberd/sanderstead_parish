@@ -8,7 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :fog
-  # storage :fog
+  #storage :file
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -19,6 +19,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def cache_dir
     "#{Rails.root}/tmp/uploads"
   end
+  
+  process :resize_to_fill => [1160, 310], :if => :is_background_image?
+  process :resize_to_fit => [900, 900], :if => :is_content_image?
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -27,14 +30,19 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
+  
   #
-  # def scale(width, height)
-  #   # do something
-  # end
-
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [50, 50]
+    process :resize_to_fit => [500, 100]
+  end
+  
+  def is_background_image? image
+    model.image_type == 'background_image'
+  end
+
+  def is_content_image? image
+    model.image_type == 'content'
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

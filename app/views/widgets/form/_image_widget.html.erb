@@ -10,7 +10,7 @@
 			<%= radio_button_tag 'image_widget[image_id]', image.id, widget.image == image %>
 	    <%= label_tag image.name %>			
 		</div>
-		<%= image_tag image.cover_image.thumb('x100').url %><br />
+		<%= image_tag image.file.url %><br />
    </div>
 	<% end %>
 	<div class="spacer"></div>

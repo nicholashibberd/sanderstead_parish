@@ -1,19 +1,19 @@
 class Image
   include Mongoid::Document
-  attr_accessible :file, :file_cache, :name, :caption, :link, :image_type
+  #attr_accessible :file, :file_cache, :name, :caption, :link, :image_type
   
-  field :cover_image_uid
+  #field :cover_image_uid
   field :name
   field :caption
   field :link
-  field :image_type, :default => 'content'
+  field :image_type
+  field :test_field
   
   has_and_belongs_to_many :pages
   has_many :image_widgets
   validates_presence_of :name
   validates_uniqueness_of :name
   
-  #image_accessor :cover_image
   mount_uploader :file, ImageUploader
   
   before_destroy :remember_id
@@ -31,4 +31,5 @@ class Image
   def remove_id_directory
     FileUtils.remove_dir("#{Rails.root}/public/uploads/image/file/#{@id}", :force => true)
   end
+  
 end

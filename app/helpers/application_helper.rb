@@ -1,15 +1,15 @@
 module ApplicationHelper
   def logo
     if @church
-      link_to image_tag("/assets/#{@church.slug}-logo.png"), root_path
+      link_to image_tag("/assets/#{@church.slug}-logo.png"), "/#{@church.slug}"
     else
-      link_to image_tag("parish-logo.png"), root_path
+      link_to image_tag("parish-logo.png"), parish_home_path
     end
   end
   
   def sub_logo
-    if @group
-      link_to image_tag("parish-logo-small.png"), root_path
+    if !@church.is_a?(Parish)
+      link_to image_tag("parish-logo-small.png"), parish_home_path
     end
   end
   

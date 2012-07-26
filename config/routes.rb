@@ -16,6 +16,7 @@ SandersteadParish::Application.routes.draw do
       end
     end
     match '/pages', :to => 'pages#all_pages'
+    match '/', :to => 'admin#home', :as => 'admin_home'
   end
   
   resources :sessions, :only => [:create]
@@ -46,8 +47,6 @@ SandersteadParish::Application.routes.draw do
   
   # Routes in the host application
   get '/pages/:id', :to => 'pages#show'
-  match '/', :to => 'pages#home', :as => :root
-  match '/test', :to => 'pages#test', :as => :test
   
   get ':church_id/:id', :to => 'pages#show', :as => :page_show
   

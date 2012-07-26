@@ -4,17 +4,17 @@
     <%= f.text_field :name %>
   </div>
 	<div class="field">
+    <%= f.label :image_type %>
+    <%= f.select :image_type, options_for_select([['Content', 'content'], ['Background Image', 'background_image']], (params[:image_type] || @image.image_type)) %>
+  </div>
+	<div class="field">
     <%= f.label :image_file %>
     <%= f.file_field :file %>
     <%= f.hidden_field :file_cache %>
   </div>
-	<div class="field">
-    <%= f.label :image_type %>
-    <%= f.select :image_type, options_for_select([['Content', 'content'], ['Background Image', 'background_image']], (params[:image_type] || @image.image_type)) %>
-  </div>
 	<% unless @image.new_record? %>
 	 	<div>
-			<%#= image_tag @image.cover_image.thumb('x100').url %>
+			<%= image_tag @image.image.file.url %>
 		</div>
 	<% end %>
 

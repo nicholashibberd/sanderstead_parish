@@ -1,9 +1,9 @@
 <% if widget.image %>
 	<div class="image_widget widget">
 		<% unless widget.link.blank? %>
-			<%= link_to (image_tag widget.image.cover_image.url), widget.link %><br />
+			<%= link_to (image_tag widget.image.file.url), widget.link %><br />
 		<% else %>
-			<%= image_tag widget.image.cover_image.url %><br />
+			<%= image_tag widget.image.file.url %><br />
 		<% end %>
 	</div>
 <% else %>
