@@ -1,20 +1,15 @@
-<div class="field">
-  <%= f.label :thumbnail_width %>
-  <%= f.text_field :thumbnail_width %>
-</div>
-
-<div class="field">
+<div class="field clearfix">
   <%= f.label :images %>
 	<% Image.content.in_groups_of(3, false).each do |row| %>
 		<div class="gallery_widget_row">
 			<% row.each do |image| %>
-	    <div class="gallery_widget_form_item">
-				<div class="gallery_widget_form_item_details">
-			    <%= label_tag image.caption %><br />
+	    <div class="image_widget_form_item">
+				<div class="image_widget_form_item_details">
+			    <%= label_tag image.name %><br />
 					<%= check_box_tag 'gallery_widget[image_ids][]', image.id, widget.images.include?(image) %>
 			
 				</div>
-				<%= image_tag image.image.file.url %><br />
+				<%= image_tag image.file.thumb.url %><br />
 	    </div>
 			<% end %>
 		</div>

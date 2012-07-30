@@ -11,7 +11,7 @@
 		<%= repeating_regions do |regions| %>
 		
 			<% regions.each do |region_name| %>
-				<%= region(region_name) do |region| %>
+				<%= region({:name => region_name, :repeating => true}) do |region| %>
 					<div class="region clearfix">
 						<div class="region_images">
 							<%= region.images %>

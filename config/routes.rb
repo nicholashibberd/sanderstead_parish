@@ -7,6 +7,7 @@ SandersteadParish::Application.routes.draw do
 
   scope 'admin' do
     resources :images
+    resources :documents
     resources :nav_menus do
       resources :nav_items
     end
@@ -15,7 +16,7 @@ SandersteadParish::Application.routes.draw do
         get :change_password
       end
     end
-    match '/pages', :to => 'pages#all_pages'
+    match '/pages', :to => 'pages#all_pages', :as => :all_pages
     match '/', :to => 'admin#home', :as => 'admin_home'
   end
   

@@ -1,5 +1,5 @@
 <div class="admin_add_widget_controls">
 	<% widget_types.each do |widget_type| %>
-		<%= link_to "#{widget_type.titleize}", new_page_widget_path(@church, @page, :widget_type => "#{widget_type}_widget", :region => region), :class => 'btn btn-info' %>
+		<%= link_to "#{widget_type.titleize}", new_page_widget_path(@church, @page, :widget_type => "#{widget_type}_widget", :region => region, :repeating => repeating), :class => 'btn btn-info' %>
 	<% end %>
 </div>

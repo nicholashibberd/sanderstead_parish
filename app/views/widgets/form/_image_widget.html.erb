@@ -4,13 +4,13 @@
 
 <div class="field">
   <%= f.label :choose_image %>
-	<% Image.all.each do |image| %>
+	<% Image.content.each do |image| %>
    <div class="image_widget_form_item">
 		<div class="image_widget_form_item_details">
 			<%= radio_button_tag 'image_widget[image_id]', image.id, widget.image == image %>
 	    <%= label_tag image.name %>			
 		</div>
-		<%= image_tag image.file.url %><br />
+		<%= image_tag image.file.thumb.url %><br />
    </div>
 	<% end %>
 	<div class="spacer"></div>

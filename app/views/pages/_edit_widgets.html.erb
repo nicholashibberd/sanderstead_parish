@@ -4,4 +4,4 @@
 		<%= link_to 'Edit', edit_page_widget_path(@church, @page, widget), :class => 'btn btn-warning' %>
 	</div>
 <% end %>
-<%= render 'widgets/add_widget_controls', :region => region, :widget_types => widget_types %>
+<%= render 'widgets/add_widget_controls', :region => region, :widget_types => widget_types, :repeating => repeating %>

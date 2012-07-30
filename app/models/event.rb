@@ -4,7 +4,6 @@ class Event
   default_scope asc(:start_time)  
   
   belongs_to :event_series
-  belongs_to :church
   
   field :title
   field :location
@@ -82,5 +81,17 @@ class Event
     end
     events = events.by_church(church_id) if church_id
     events.group_by {|event| event.start_date}
-  end    
+  end  
+  
+  def church
+    Church.find_by_slug(church_id)
+  end  
+  
+  def display_location
+    if church
+      location ? location : church.name
+    else
+      location
+    end
+  end
 end

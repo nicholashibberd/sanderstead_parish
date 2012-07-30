@@ -28,7 +28,6 @@ class PagesController < AdminController
   end
 
   def create
-    raise params[:page].inspect
     page = Page.new(params[:page])
     if page.save
   		redirect_to edit_page_path(@church, page), :notice => 'Page successfully created'
@@ -61,7 +60,7 @@ class PagesController < AdminController
     page = Page.find(params[:page_id])
     widget_type = params[:commit].downcase
     region = params[:region].parameterize('_')
-    redirect_to new_cms_page_widget_path(page, :widget_type => "#{widget_type}_widget", :region => region, :repeating => params[:repeating])
+    redirect_to new_page_widget_path(@church, page, :widget_type => "#{widget_type}_widget", :region => region, :repeating => params[:repeating])
   end
   
   def choose_layout

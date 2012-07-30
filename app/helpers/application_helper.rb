@@ -84,8 +84,8 @@ module ApplicationHelper
     output    
   end
   
-  def render_widgets(name, widgets, widget_types)
-    render "pages/#{controller.action_name}_widgets", :region => name, :widgets => widgets, :widget_types => widget_types
+  def render_widgets(name, widgets, widget_types, repeating)
+    render "pages/#{controller.action_name}_widgets", :region => name, :widgets => widgets, :widget_types => widget_types, :repeating => repeating
   end
   
   def repeating_regions(&block)
@@ -108,6 +108,7 @@ module ApplicationHelper
       @page = page
       @options = options
       @template = template
+      @repeating = options[:repeating]
     end
     
     def images
@@ -133,7 +134,7 @@ module ApplicationHelper
     end   
     
     def render(name, widgets, widget_types)
-      template.render_widgets(name, widgets, widget_types)
+      template.render_widgets(name, widgets, widget_types, @repeating)
     end
     
     def widgets(options = {})

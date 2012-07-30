@@ -6,7 +6,7 @@
 <div class="gallery_widget widget">
 	<% widget.images.asc(:position).each do |image| %>
 		<div class="gallery_item">
-			<%= link_to (image_tag image.cover_image.thumb("#{widget.thumbnail_width}x").url), image.cover_image.url, :rel => "lightbox-gallery", :title => image.caption %>
+			<%= link_to (image_tag image.file.url, :height => '140px'), image.file.url, :rel => "lightbox-gallery", :title => image.caption %>
 			</div>
 	<% end %>
 	<div class="spacer"></div>

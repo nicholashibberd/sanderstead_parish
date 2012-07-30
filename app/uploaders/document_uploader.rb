@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ImageUploader < CarrierWave::Uploader::Base
+class DocumentUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
    include CarrierWave::RMagick
@@ -20,9 +20,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp/uploads"
   end
   
-  process :resize_to_fill => [1160, 310], :if => :is_background_image?
-  process :resize_to_limit => [900, 900], :if => :is_content_image?
-
+  #version :thumb do
+    #process :resize_to_fit => [500, 100]
+  #end
+  
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
@@ -33,24 +34,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   
   #
   # Create different versions of your uploaded files:
-  version :thumb do
-    process :resize_to_fit => [500, 100]
-  end
-  
-  #version :widget do
-    #model.dimensions.each do |dimensions|
-      #process :resize_to_fit => dimensions
-    #end
-  #end
-  
-  def is_background_image? image
-    model.image_type == 'background_image'
-  end
-
-  def is_content_image? image
-    model.image_type == 'content'
-  end
-
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

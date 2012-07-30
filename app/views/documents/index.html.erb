@@ -1,0 +1,24 @@
+<div class="top_right_controls">
+	<%= link_to 'New Document', new_document_path, :class => 'btn btn-info' %>
+</div>
+
+<div class="page_header">
+	<h1>Documents</h1>
+</div>
+
+<section class="page_content">
+	<div id="sortable_documents">
+		<% @documents.each do |document| %>
+			<div class="index_item document_index_item" id="document_<%= document.id %>">
+				<div class="controls">
+					<%= link_to 'Delete', document_path(document), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+					<%= link_to 'Edit', edit_document_path(document), :class => 'btn btn-warning' %>				
+					<%= link_to 'View', view_document_path(document), :class => 'btn' %>									
+				</div>
+				<div class="documents_index_document">
+					<%= document.name %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</section>

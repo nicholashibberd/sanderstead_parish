@@ -19,4 +19,8 @@ module PagesHelper
     page.new_record? ? pages_path(church) : page_path(church, page)
   end
   
+  def view_document_path(document)
+    document.file.url
+  end
+  
 end

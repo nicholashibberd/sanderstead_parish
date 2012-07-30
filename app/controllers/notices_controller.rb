@@ -1,7 +1,7 @@
 class NoticesController < ApplicationController
   layout :choose_layout
   
-  def index    
+  def index 
     @notices = Notice.by_church_and_month(@church, params[:month])    
   end
   
