@@ -1,13 +1,10 @@
 class Image
   include Mongoid::Document
-  #attr_accessible :file, :file_cache, :name, :caption, :link, :image_type
   
-  #field :cover_image_uid
   field :name
   field :caption
   field :link
   field :image_type
-  field :test_field
   
   has_and_belongs_to_many :pages
   has_many :image_widgets

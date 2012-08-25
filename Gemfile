@@ -8,14 +8,13 @@ gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem "redcarpet"
 gem 'bson_ext'
 gem 'jquery-rails'
-gem "mongoid-paperclip"
 gem "twitter-bootstrap-rails"
-gem "later_dude"
 gem "truncate_html"
 gem "rack-cache"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
 gem "fog", "~> 1.3.1"
+gem 'tinymce-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

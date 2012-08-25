@@ -9,4 +9,5 @@
 //= require jquery_ujs
 //= require forms.js
 //= require twitter/bootstrap
-//= require slimbox2.js
+//= require twitter/bootstrap
+//= require tinymce-jquery
