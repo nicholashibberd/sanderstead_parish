@@ -1,3 +1,4 @@
+<%= tinymce %>
 <%= form_for @sermon, :url => @path do |f| %>
 	<div class="field">
 		<%= f.label :title %>
@@ -5,7 +6,7 @@
 	</div>
 	<div class="field">
 		<%= f.label :body %>
-		<%= f.text_area :content, :class => "ckeditor" %>
+		<%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
 	</div>
 	<div class="field">
 		<%= f.label :date %>

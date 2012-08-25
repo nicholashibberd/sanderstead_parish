@@ -1,3 +1,4 @@
+<%= tinymce %>
 <%= form_for @event, :url => @path do |f| %>
   <div class="field">
     <%= f.label :title %>
@@ -33,7 +34,7 @@
   </div>
   <div class="field datetime_field">
     <%= f.label :description %>
-    <%= f.text_area :content, :class => "ckeditor" %>
+    <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
   </div>
 	<p>
 	  <%=f.label :category %>
