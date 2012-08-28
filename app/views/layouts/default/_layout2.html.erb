@@ -2,13 +2,15 @@
 	<div id="background_image">
 		<%= region(BACKGROUND_IMAGE) %>
 	</div>
-	<div id="main_content" class="container">
-		<div id="main">
-			<%= region('main') %>
+	<div id="main_content">
+		<div class="container">
+			<div id="main">
+				<%= region('main') %>
+			</div>
+			<div id="sidebar">
+				<%= region('sidebar') %>
+			</div>
+			<div class="spacer"></div>
 		</div>
-		<div id="sidebar">
-			<%= region('sidebar') %>
-		</div>
-		<div class="spacer"></div>
 	</div>
 </div>

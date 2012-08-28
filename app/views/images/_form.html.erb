@@ -14,7 +14,7 @@
   </div>
 	<% unless @image.new_record? %>
 	 	<div>
-			<%= image_tag @image.image.file.url %>
+			<%= image_tag @image.file.url %>
 		</div>
 	<% end %>
 

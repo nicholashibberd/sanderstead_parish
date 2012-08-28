@@ -8,32 +8,34 @@
 </head>
 <body id="sanderstead_parish">
 	<div id='wrapper'>
-		<div id='header'>
-			<div id="logo">
-				<h1><%= logo %></h1>
-				<div id="sub_logo">
-					<%= sub_logo %>
+			<div id='header'>
+				<div class="container">
+					<div id="logo">
+						<h1><%= logo %></h1>
+						<div id="sub_logo">
+							<%= sub_logo %>
+						</div>
+					</div>
+					<div id="parish_nav">
+						<%= link_to 'Parish', parish_home_path %>
+						<%= link_to 'All Saints', '/all-saints' %>
+						<%= link_to "St Mary's", '/st-marys' %>
+						<%= link_to "St Edmund's", '/st-edmunds' %>
+						<%= link_to "St Antony's", '/st-antonys' %>
+				</div>
 				</div>
 			</div>
-			<div id="parish_nav">
-				<%= link_to 'Parish', parish_home_path %>
-				<%= link_to 'All Saints', '/all-saints' %>
-				<%= link_to "St Mary's", '/st-marys' %>
-				<%= link_to "St Edmund's", '/st-edmunds' %>
-				<%= link_to "St Antony's", '/st-antonys' %>
+			<div id='top_nav'>
+				<div class="container">
+					<%= render 'layouts/top_nav', :nav_menu => church_nav %>
+				</div>
 			</div>
+			
+			<%= yield %>
 		</div>
-		<div id='top_nav'>
-			<%= render 'layouts/top_nav', :nav_menu => church_nav %>
-		</div>
-		
-		<%= yield %>
-
 	</div>
-	<div id="footer">
-		<div id="footer_wrapper">
+	<div id="footer" class="container">
 			<%= render 'layouts/footer' %>
-		</div>
 	</div>
 	<%= render 'layouts/analytics' %>
 </body>

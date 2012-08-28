@@ -49,18 +49,13 @@ body#sanderstead_parish {
 	
 	#wrapper {
 		margin: auto;
-		width: 1160px;
-		border: 10px solid #fff;
+		max-width: 1160px;
+		width: 100%;
 		box-shadow: 1px 1px 5px #333;	
 	}
 
-	#footer_wrapper {
-		margin: auto;
-		width: 960px;
-	}
-
 	#footer {
-		padding: 20px 100px 40px 100px;
+		padding: 20px 0 40px 0;
 		margin-top: 20px;
 		text-align: center;
 	}
@@ -72,7 +67,6 @@ body#sanderstead_parish {
 	#header {
 		height: 120px;
 		position: relative;
-		padding: 0 100px;	
 		background: red;
 		background: url(backgrounds/gradients/white_pale_blue.png);
 		@include gradiented(#FFF, #C6DDE7);
@@ -97,7 +91,6 @@ body#sanderstead_parish {
 
 	#top_nav {
 		height: 50px;
-		padding: 0 100px;
 		background: url(backgrounds/gradients/blue_dark_blue.png);		
   	@include gradiented(#496886, #212f3d);
 	}
