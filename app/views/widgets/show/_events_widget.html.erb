@@ -1,6 +1,7 @@
 <div class="widget events_widget">
 	<h2><%= widget.name %></h2>
-	<% Event.grouped_by_day(widget.event_category, widget.church_id).first(widget.number_to_display).each do |day, events| %>
+	<%# Event.grouped_by_day(widget.event_category, widget.church_id).first(widget.number_to_display).each do |day, events| %>
+	<% widget.events.each do |day, events| %>
 		<div class='event_day'>
 			<%= date_icon(day).html_safe %>			
 			<% events.each do |event| %>

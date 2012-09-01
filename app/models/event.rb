@@ -18,6 +18,7 @@ class Event
   field :position  
   field :series_id
   field :category
+  field :church_id
   
   validates_presence_of :start_time
 
@@ -79,7 +80,9 @@ class Event
     unless category == 'All'
       events = events.by_category(category) if category
     end
-    events = events.by_church(church_id) if church_id
+    unless church_id == 'parish'
+      events = events.by_church(church_id) if church_id
+    end
     events.group_by {|event| event.start_date}
   end  
   
