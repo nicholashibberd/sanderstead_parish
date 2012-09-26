@@ -8,3 +8,4 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require slimbox2.js
+//= require calendar.js

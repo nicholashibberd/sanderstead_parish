@@ -7,13 +7,17 @@
 				<%= link_to calendar.month('next'), "/parish/calendar?date=#{calendar.next_month.strftime('%Y-%m-%d')}", :id => "calendar_next_link" %>
 				<h2><%= calendar.month('current') %></h2>
 			</div>
+
+			<table id="table_headings">
+				<td></td>
+				<td>All Saints</td>
+				<td>St Mary's</td>
+				<td>St Edmund's</td>
+				<td>St Antony's</td>
+				<td>Parish</td>
+			</table>
+			
 			<table>
-				<th></th>
-				<th>All Saints</th>
-				<th>St Mary's</th>
-				<th>St Edmund's</th>
-				<th>St Antony's</th>
-				<th>Parish</th>
 				<% calendar.events_by_day.each do |day, events| %>
 					<tr class="<%= calendar.events_today?(day) %>">
 						<td class="day">

@@ -4,7 +4,7 @@
 Calendar
 ***********************************/
 #calendar #date_bar {
-	margin-top: 10px;
+	margin: 10px 0 20px 0;
 	h2 { text-align: center; }
 	#calendar_previous_link { float: left; margin-top: 10px; font-size: 16px; }
 	#calendar_next_link { float: right; margin-top: 10px; font-size: 16px; }
@@ -13,7 +13,6 @@ Calendar
 #calendar table {
 	width: 100%;
 	border-collapse: collapse;
-	margin-top: 20px;
 }
 
 tr.month_names {
@@ -57,3 +56,18 @@ tr.month_names {
 .calendar_event .event_time {
 	color: #666;
 }
+
+table#table_headings {
+	td { 
+		background: #93A7B9;
+  	@include gradiented(#BDD1DC, #BDD1DC);
+		border: none; text-align: center; 
+		padding: 10px 0;
+		color: #32475C;
+		font-weight: bold;
+		font-size: 16px;
+		text-shadow: 1px 1px 1px #fff;
+	}
+}
+
+table#table_headings.fixed { position: fixed; top: 0; width: 940px; margin-top: 0; }
