@@ -28,11 +28,11 @@
   	<%=f.label :position, "Repeat every" %>
 	  <%=f.select :position, ([['First', 0], ['Second', 1], ['Third', 2], ['Fourth', 3], ['Last', -1]]) %> <span id = "period_other"></span>
 	</div>
-	<div class="field" style="display:none;" id="end_date">
+	<div class="field datetime_field" style="display:none;" id="end_date">
     <%= f.label :until %>
     <%= f.datetime_select :end_time, :default => 24.hours.from_now, :minute_step => 10 %>
   </div>
-  <div class="field datetime_field">
+  <div class="field">
     <%= f.label :description %>
     <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
   </div>
