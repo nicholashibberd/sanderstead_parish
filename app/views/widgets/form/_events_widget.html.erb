@@ -3,8 +3,12 @@
   <%= f.text_field :name %>
 </div>
 <div class="field">
-  <%= f.label :event_category %>
-  <%= f.select :event_category, options_for_select(Event::CATEGORIES, widget.event_category) %>
+  <%= f.label :event_categories %>
+  <% Event::CATEGORIES.each do |cat| %>
+  	<div>
+  		<%= check_box_tag 'events_widget[event_categories][]', cat, widget.event_categories.include?(cat) %> <%= cat %>
+  	</div>
+  <% end %>
 </div>
 <div class="field">
   <%= f.label :number_to_display %>

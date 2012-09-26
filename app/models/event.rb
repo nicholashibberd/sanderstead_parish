@@ -46,7 +46,6 @@ class Event
   ]
   
   CATEGORIES = [
-              "All",
               "Service",
               "Coffee Morning",
               "Charity",

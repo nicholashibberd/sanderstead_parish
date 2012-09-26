@@ -1,6 +1,6 @@
 class EventsWidget < Widget
   field :name
-  field :event_category
+  field :event_categories, :default => []
   field :number_to_display, :type => Integer, :default => 5
   field :church_id, :default => 'parish'
   
@@ -13,12 +13,13 @@ class EventsWidget < Widget
 
   def events
     events = Event.upcoming
-    unless event_category == 'All'
-      events = events.by_category(event_category) if event_category
-    end
+    #unless event_category == 'All'
+      #events = events.by_category(event_category) if event_category
+    #end
     unless church_id == 'parish'
       events = events.by_church(church_id) if church_id
     end
+    events = events.select {|event| event_categories.include?(event.category)}
     events.group_by {|event| event.start_date}.first(number_to_display)
   end  
   
