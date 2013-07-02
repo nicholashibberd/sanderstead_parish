@@ -1,7 +1,6 @@
 development:
   host: localhost
-  database: sanderstead_parish_new_development
-  #database: sanderstead_parish_development
+  database: sanderstead_parish_development
 
 test:
   host: localhost
