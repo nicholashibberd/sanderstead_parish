@@ -4,7 +4,7 @@ class Article
   
   field :title
   field :content
-  field :date, :type => Date, :default => Date.today
+  field :date, :type => Date, :default => Time.now.utc.to_date
   field :church_id
   field :group_id
   
