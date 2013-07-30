@@ -39,7 +39,9 @@ group :production do
   gem "thin"
 end
 
-group :test do
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
   # Pretty printed test output
   #gem 'turn', :require => false
 end
