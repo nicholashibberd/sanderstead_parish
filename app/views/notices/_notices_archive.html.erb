@@ -1,6 +1,6 @@
 <div id="articles_archive">
 	<h2>Notices Archive</h2>
-	<% Notice.months_with_articles(group).each do |month| %>
+	<% Notice.months_with_articles(@church).each do |month| %>
 		<div class="articles_archive_item ">
 			<%= link_to month.strftime('%B %Y'), notices_path(@church, :month => month.strftime('%m-%Y')) %>
 		</div>
