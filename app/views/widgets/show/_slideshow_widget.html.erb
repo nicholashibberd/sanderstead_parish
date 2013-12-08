@@ -1,0 +1,8 @@
+<div class="slideshow_widget widget">
+	<% widget.images.asc(:position).each do |image| %>
+		<div class="slideshow_item">
+			<%= link_to (image_tag image.file.url, :height => '140px'), image.file.url, :title => image.caption %>
+			</div>
+	<% end %>
+	<div class="spacer"></div>
+</div>

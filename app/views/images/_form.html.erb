@@ -5,7 +5,10 @@
   </div>
 	<div class="field">
     <%= f.label :image_type %>
-    <%= f.select :image_type, options_for_select([['Content', 'content'], ['Background Image', 'background_image']], (params[:image_type] || @image.image_type)) %>
+    <%= f.select :image_type, options_for_select(
+      [['Content', 'content'], ['Background Image', 'background_image'], ['Slideshow Image', 'slideshow_image']], 
+      (params[:image_type] || @image.image_type)
+      ) %>
   </div>
 	<div class="field">
     <%= f.label :image_file %>

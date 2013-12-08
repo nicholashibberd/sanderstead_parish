@@ -18,6 +18,7 @@ class Image
   
   scope :background_images, where(:image_type => 'background_image')
   scope :content, where(:image_type => 'content')
+  scope :slideshow_images, where(:image_type => 'slideshow_image')
   
   protected
 

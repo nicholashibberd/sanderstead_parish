@@ -1,0 +1,17 @@
+<div class='top_right_controls'>
+  <%= link_to 'Add New Image', new_image_path(:image_type => 'slideshow_image'), :class => 'btn btn-info', :id => 'new_image_link' %>
+</div>
+
+<div class="field">
+  <%= f.label :choose_image %>
+	<% Image.slideshow_images.all.each do |image| %>
+   <div class="image_widget_form_item">
+		<div class="image_widget_form_item_details">
+			<%= check_box_tag 'slideshow_widget[image_ids][]', image.id, widget.images.include?(image) %>
+	    <%= label_tag image.name %>			
+		</div>
+		<%= image_tag image.file.thumb.url %><br />
+   </div>
+	<% end %>
+	<div class="spacer"></div>
+</div>

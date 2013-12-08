@@ -42,6 +42,8 @@ end
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
+  gem "pry-rails"
+  gem "pry-nav"
   # Pretty printed test output
   #gem 'turn', :require => false
 end
