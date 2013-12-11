@@ -1,6 +1,7 @@
 body#sanderstead_parish {
 	#parish_home {
-		#background_image { position: relative; z-index: 0 }
+		#slideshow { position: relative; z-index: 0 }
+		#slideshow_controls {position: absolute; z-index: 1; width: 1160px; top: 290px;}
 		#main_content { 
 			margin-top: -300px;
 			position: relative;

@@ -9,7 +9,7 @@ gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem "redcarpet"
 gem 'bson_ext'
 gem 'jquery-rails'
-gem "twitter-bootstrap-rails"
+#gem "twitter-bootstrap-rails"
 gem "truncate_html"
 gem "rack-cache"
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'

@@ -1,8 +1,17 @@
-<div class="slideshow_widget widget">
-	<% widget.images.asc(:position).each do |image| %>
-		<div class="slideshow_item">
-			<%= link_to (image_tag image.file.url, :height => '140px'), image.file.url, :title => image.caption %>
-			</div>
-	<% end %>
-	<div class="spacer"></div>
+<div id="myCarousel" class="carousel slide slideshow_widget widget">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+		<div class="item active">
+      <img src="<%= widget.first_image.file.url %>">
+    </div>
+    <% widget.remaining_images.each do |image| %>
+	  	<div class="item">
+	      <img src="<%= image.file.url %>">
+	    </div>
+	  <% end %>
+  </div>
 </div>

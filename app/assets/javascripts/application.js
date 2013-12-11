@@ -6,6 +6,7 @@
 //
 //= require jquery-1.7.1.min.js
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require slimbox2.js
 //= require calendar.js
+//= require slideshow.js
+//= require bootstrap.min.js
