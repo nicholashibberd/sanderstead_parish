@@ -26,7 +26,7 @@ Slideshow.prototype.load_images = function() {
 }
 
 $(document).ready(function() {
-	// if ($('.slideshow_widget').length) {
-	// 	var slideshow = new Slideshow($('.slideshow_widget'))
-	// }
+	if ($('.slideshow_widget').length) {
+		var slideshow = new Slideshow($('.slideshow_widget'))
+	}
 })
