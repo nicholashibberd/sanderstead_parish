@@ -317,6 +317,14 @@ table {
 		padding: 5px;
 	}
 }	
+
+table.events_table {
+	td { 
+		border: none; 
+		padding: 10px 5px;
+	}
+	
+}
 	
 
 /***********************************
@@ -387,7 +395,6 @@ Profile Widget
 		
 	.event_widget_event {
 		margin-bottom: 10px;
-		margin-left: 70px;
 		color: #666;
 		font-size: 14px;
 		

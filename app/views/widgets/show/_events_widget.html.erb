@@ -1,20 +1,27 @@
 <div class="widget events_widget">
 	<h2><%= widget.name %></h2>
-	<%# Event.grouped_by_day(widget.event_category, widget.church_id).first(widget.number_to_display).each do |day, events| %>
-	<% widget.events.each do |day, events| %>
-		<div class='event_day'>
-			<%= date_icon(day).html_safe %>			
-			<% events.each do |event| %>
-				<div class="event_widget_event">
-					<div class="event_name">
-						<a data-toggle="modal" href="#event_<%= event.id %>_modal" ><%= event.title %></a>
-					</div>
-					<div>
-						<span class="strong"><%= event.start_time.strftime('%H:%M') %></span>
-					</div>
-				</div>
-				<%= render 'calendar/event_modal_window', :event => event %>
+	<table class="events_table">
+		<tbody>
+			<% widget.events.each do |day, events| %>
+				<tr class="event_day">
+					<td class="event_day_date_icon">
+						<%= date_icon(day).html_safe %>			
+					</td>
+					<td class="event_day_events">
+						<% events.each do |event| %>
+							<div class="event_widget_event">
+								<div class="event_name">
+									<a data-toggle="modal" href="#event_<%= event.id %>_modal" ><%= event.title %></a>
+								</div>
+								<div>
+									<span class="strong"><%= event.start_time.strftime('%H:%M') %></span>
+								</div>
+							</div>
+							<%= render 'calendar/event_modal_window', :event => event %>
+						<% end %>
+					</td>
+				</tr>
 			<% end %>
-		</div>
-	<% end %>
+		</tbody>
+	</table>
 </div>

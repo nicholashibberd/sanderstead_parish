@@ -1,6 +1,8 @@
 <div id="parish_home">
 	<div id="slideshow">
-		<%= region(SLIDESHOW) %>
+		<%= region(SLIDESHOW) do |region| %>
+			<%= render 'widgets/show/slideshow_widget', region: region %>
+		<% end %>
 	</div>
 	<div id="slideshow_controls">
 		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>

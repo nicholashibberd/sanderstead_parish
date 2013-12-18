@@ -1,19 +1,27 @@
-<div id="myCarousel" class="carousel slide slideshow_widget widget">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <% widget.remaining_images.each.with_index(1) do |image, index| %>
-    	<li data-target="#myCarousel" data-slide-to="<%= index %>"></li>
-    <% end %>
-  </ol>
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-		<div class="item active">
-      <img src="<%= widget.first_image.file.url %>">
+<%= slideshow(region) do |slideshow| %>
+  
+  <div id="myCarousel" class="carousel slide slideshow_widget widget">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <% slideshow.remaining_slides.each.with_index(1) do |slide, index| %>
+        <li data-target="#myCarousel" data-slide-to="<%= index %>"></li>
+      <% end %>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="<%= slideshow.first_slide.link %>">
+          <img src="<%= slideshow.first_slide.image.file.url %>">
+        </a>
+      </div>
+      <% slideshow.remaining_slides.each do |slide| %>
+        <div class="item">
+          <a href="<%= slide.link %>">
+            <div data-src="<%= slide.image.file.url %>" class="load-lazy"></div>
+          </a>
+        </div>
+      <% end %>
     </div>
-    <% widget.remaining_images.each do |image| %>
-	  	<div class="item">
-	      <div data-src="<%= image.file.url %>" class="load-lazy"></div>
-	    </div>
-	  <% end %>
   </div>
-</div>
+
+<% end %>

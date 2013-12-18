@@ -8,6 +8,5 @@
 //= require jquery-ui.js
 //= require jquery_ujs
 //= require forms.js
-//= require twitter/bootstrap
-//= require twitter/bootstrap
 //= require tinymce-jquery
+//= require bootstrap.min.js

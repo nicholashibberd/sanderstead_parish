@@ -20,7 +20,8 @@ class ImageUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp/uploads"
   end
   
-  process :resize_to_fill => [1160, 310], :if => :is_full_width_image?
+  process :resize_to_fill => [1160, 310], :if => :is_background_image?
+  process :resize_to_fill => [1160, 270], :if => :is_slideshow_image?
   process :resize_to_limit => [900, 900], :if => :is_content_image?
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -43,12 +44,16 @@ class ImageUploader < CarrierWave::Uploader::Base
     #end
   #end
   
-  def is_full_width_image? image
-    ['background_image', 'slideshow_image'].include?(model.image_type)
+  def is_background_image? image
+    model.image_type == 'background_image'
   end
 
   def is_content_image? image
     model.image_type == 'content'
+  end
+
+  def is_slideshow_image? image
+    model.image_type == 'slideshow'
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

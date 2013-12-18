@@ -3,10 +3,10 @@ body#sanderstead_parish {
 		#slideshow { position: relative; z-index: 0 }
 		#slideshow_controls {position: absolute; z-index: 1; width: 1160px; top: 290px;}
 		#main_content { 
-			margin-top: -300px;
 			position: relative;
-			background: url(backgrounds/sidebar_content.png) no-repeat center 0;
-			#left { float: left; width: 540px; padding-top: 260px; 
+			background: url(backgrounds/homepage_content.png) repeat-x;
+			margin-top: -20px;
+			#left { float: left; width: 540px; 
 				#intro { margin-bottom: 30px; }
 				#churches {
 					.church { margin-bottom: 20px;
@@ -16,7 +16,15 @@ body#sanderstead_parish {
 				}
 			}
 			
-			#right { margin-left: 580px; width: 350px; padding-top: 20px; }
+			#right { 
+				margin-left: 560px; 
+				width: 335px;
+				margin-top: -300px; 
+				background: url(backgrounds/homepage_sidebar.png) no-repeat;
+				padding-left: 40px;
+				padding-top: 30px;
+				padding-right: 40px;
+			}
 			
 			#bottom { 
 				h1 { margin-bottom: 20px; }
