@@ -21,7 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   
   process :resize_to_fill => [1160, 310], :if => :is_background_image?
-  process :resize_to_fill => [1160, 270], :if => :is_slideshow_image?
+  process :resize_to_fill => [1160, 310], :if => :is_slideshow_image?
   process :resize_to_limit => [900, 900], :if => :is_content_image?
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
