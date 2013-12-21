@@ -1,7 +1,7 @@
 <div id="parish_home">
 	<div id="slideshow">
 		<%= region(SLIDESHOW) do |region| %>
-			<%= render 'widgets/show/slideshow_widget', region: region %>
+			<%= render_slideshow(region) %>
 		<% end %>
 	</div>
 	<div id="slideshow_controls">

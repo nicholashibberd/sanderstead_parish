@@ -68,7 +68,7 @@ module ApplicationHelper
   end
   
   def edit_region(name, options, &proc)
-    region_builder = Region.new(name, @page, options, self) 
+    region_builder = Region.new(name, @page, options, self)
     if block_given?
       render_region(name, capture(region_builder, &proc))
     else
@@ -125,6 +125,10 @@ module ApplicationHelper
     
     def gallery
       render(name, widgets(:widget_type => 'GalleryWidget'), ['gallery'])
+    end
+
+    def slides
+      render(name, widgets(:widget_type => 'SlideWidget'), ['slide'])
     end
     
     def all

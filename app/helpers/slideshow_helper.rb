@@ -4,6 +4,10 @@ module SlideshowHelper
 		capture(slideshow, &proc)
 	end
 
+	def render_slideshow(region)
+		render "widgets/#{controller.action_name}/slideshow_widget", region: region
+	end
+
 	class Slideshow
 		attr_accessor :region
 		
