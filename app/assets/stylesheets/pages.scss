@@ -319,6 +319,9 @@ table {
 }	
 
 table.events_table {
+	tr.event_day {
+		vertical-align: top;
+	}
 	td { 
 		border: none; 
 		padding: 10px 5px;
