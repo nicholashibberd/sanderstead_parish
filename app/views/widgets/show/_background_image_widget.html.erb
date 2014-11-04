@@ -1,5 +1,9 @@
 <% if widget.image %>
+  <% if widget.link %>
+	<a href="<%= widget.link %>"><%= image_tag widget.image.file.url %></a><br />
+  <% else %>
 	<%= image_tag widget.image.file.url %><br />
+  <% end %>
 <% else %>
 	<div>
 		<strong>Missing Image</strong>
