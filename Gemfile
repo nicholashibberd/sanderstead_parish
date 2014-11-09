@@ -7,7 +7,6 @@ gem 'bson_ext'
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 
 gem "redcarpet"
-gem 'bson_ext'
 gem 'jquery-rails'
 #gem "twitter-bootstrap-rails"
 gem "truncate_html"
@@ -24,8 +23,6 @@ group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
-
-gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
