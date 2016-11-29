@@ -8,7 +8,7 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  uri: <%= ENV['MONGODB_URI'] %>
   max_retries_on_connection_failure: 20
   persist_in_safe_mode: true
   skip_version_check: true
