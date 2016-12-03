@@ -6,9 +6,9 @@ test:
   host: localhost
   database: sanderstead_parish_test
 
-# set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGODB_URI'] %>
-  max_retries_on_connection_failure: 20
-  persist_in_safe_mode: true
-  skip_version_check: true
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        connect_timeout: 15
