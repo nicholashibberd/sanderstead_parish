@@ -212,3 +212,9 @@ DEPENDENCIES
   tinymce-rails
   truncate_html
   uglifier
+
+RUBY VERSION
+   ruby 1.9.2p320
+
+BUNDLED WITH
+   1.13.6
